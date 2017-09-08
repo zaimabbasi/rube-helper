@@ -7,9 +7,11 @@
 //
 
 #include <iostream>
+#include "json_converter.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    JsonConverter::buildLevelFile("resource/level_0.json", "target/world_0/level_0.json", 0, 0, "bg_0_0.png");
+    
     return 0;
 }
