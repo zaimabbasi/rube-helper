@@ -21,8 +21,7 @@ string BLOCK_STRING_LITERAL = "block";
 bool JsonConverter::buildLevelFile(std::string resource_path,
                                    std::string target_path,
                                    int world_index,
-                                   int level_index,
-                                   std::string background_res_path)
+                                   int level_index)
 {
     ifstream inputFile;
     inputFile.open(resource_path);
@@ -61,8 +60,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
         // insert top level members
         outputDocument.AddMember("world_index", world_index, allocator);
         outputDocument.AddMember("level_index", level_index, allocator);
-        // insert top level members
-
+        
         rapidjson::Value ropeStructureArray(rapidjson::kArrayType);
         rapidjson::Value blockArray(rapidjson::kArrayType);
         rapidjson::Value platformArray(rapidjson::kArrayType);
@@ -641,4 +639,22 @@ int JsonConverter::getHingeIndex(std::string bodyName)
     }
     
     return atoi(hingeIndex);
+}
+
+char * JsonConverter::getResName(std::string resPath)
+{
+    char *resName;
+    int i = ((int)resPath.length())-1;
+    int j = 0;
+    
+    for (; resPath[i] != '/'; i--);
+    
+    resName = new char[((int)resPath.length())-i];
+    
+    for (i++; i < ((int)resPath.length()); i++)
+        resName[j++] = resPath[i];
+    
+    resName[j] = '\0';
+    
+    return resName;
 }
