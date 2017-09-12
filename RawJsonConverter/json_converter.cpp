@@ -45,7 +45,6 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
         
         // manipulating JSON document
         int bodyCount = inputDocument["body"].Size();
-        int jointCount = inputDocument["joint"].Size();
         int imageCount = inputDocument["image"].Size();
         
         // document is the root of a json message
@@ -64,7 +63,6 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
         rapidjson::Value ropeStructureArray(rapidjson::kArrayType);
         rapidjson::Value blockArray(rapidjson::kArrayType);
         rapidjson::Value platformArray(rapidjson::kArrayType);
-        rapidjson::Value jointArray(rapidjson::kArrayType);
         
         // FIRST PASS
         for (int i = 0; i < bodyCount; i++)
@@ -501,21 +499,23 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
         // FOURTH PASS END
         
         // FIFTH PASS
-        jointArray = inputDocument["joint"];
-        
-        for (int i = 0; i < jointCount; i++)
+        for (int i = 0; i < inputDocument["joint"].Size(); i++)
         {
-            jointArray[i].AddMember("nameA", inputDocument["body"][jointArray[i]["bodyA"].GetInt()]["name"], allocator);
-            jointArray[i].AddMember("nameB", inputDocument["body"][jointArray[i]["bodyB"].GetInt()]["name"], allocator);
+            rapidjson::Value nameA(inputDocument["body"][inputDocument["joint"][i]["bodyA"].GetInt()]["name"].GetString(), allocator);
+            rapidjson::Value nameB(inputDocument["body"][inputDocument["joint"][i]["bodyB"].GetInt()]["name"].GetString(), allocator);
+            
+            inputDocument["joint"][i].AddMember("nameA", nameA, allocator);
+            inputDocument["joint"][i].AddMember("nameB", nameB, allocator);
         }
         // FIFTH PASS END
+        
         
         rapidjson::Value fixtureArray(rapidjson::kArrayType);
         
         outputDocument.AddMember("rope_structure", ropeStructureArray, allocator);
         outputDocument.AddMember("platform", platformArray, allocator);
         outputDocument.AddMember("block", blockArray, allocator);
-        outputDocument.AddMember("joint", jointArray, allocator);
+        outputDocument.AddMember("joint", inputDocument["joint"], allocator);
         
         // writing to target file
         rapidjson::StringBuffer strbuf;
