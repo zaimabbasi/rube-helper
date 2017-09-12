@@ -107,8 +107,9 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                     if (inputDocument["image"][j]["body"].GetInt() == i)
                     {
                         rapidjson::Value image(rapidjson::kObjectType);
+                        rapidjson::Value res(getResName(inputDocument["image"][j]["file"].GetString()), allocator);
                         
-                        image.AddMember("res", inputDocument["image"][j]["file"], allocator);
+                        image.AddMember("res", res, allocator);
                         image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
                         image.AddMember("center", inputDocument["image"][j]["center"], allocator);
                         //                        image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
@@ -155,8 +156,9 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                     if (inputDocument["image"][j]["body"].GetInt() == i)
                     {
                         rapidjson::Value image(rapidjson::kObjectType);
-                    
-                        image.AddMember("res", inputDocument["image"][j]["file"], allocator);
+                        rapidjson::Value res(getResName(inputDocument["image"][j]["file"].GetString()), allocator);
+                        
+                        image.AddMember("res", res, allocator);
                         image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
                         image.AddMember("center", inputDocument["image"][j]["center"], allocator);
 //                        image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);                        
@@ -215,8 +217,9 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                         if (inputDocument["image"][j]["body"].GetInt() == i)
                         {
                             rapidjson::Value image(rapidjson::kObjectType);
+                            rapidjson::Value res(getResName(inputDocument["image"][j]["file"].GetString()), allocator);
                             
-                            image.AddMember("res", inputDocument["image"][j]["file"], allocator);
+                            image.AddMember("res", res, allocator);
                             image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
                             image.AddMember("center", inputDocument["image"][j]["center"], allocator);
                             //                            image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
@@ -307,8 +310,9 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                                     if (inputDocument["image"][k]["body"].GetInt() == j)
                                     {
                                         rapidjson::Value image(rapidjson::kObjectType);
+                                        rapidjson::Value res(getResName(inputDocument["image"][k]["file"].GetString()), allocator);
                                         
-                                        image.AddMember("res", inputDocument["image"][k]["file"], allocator);
+                                        image.AddMember("res", res, allocator);
                                         image.AddMember("aspect_scale", inputDocument["image"][k]["aspectScale"].GetFloat(), allocator);
                                         image.AddMember("center", inputDocument["image"][k]["center"], allocator);
                                         //                            image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
@@ -387,8 +391,9 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                                     if (inputDocument["image"][k]["body"].GetInt() == j)
                                     {
                                         rapidjson::Value image(rapidjson::kObjectType);
+                                        rapidjson::Value res(getResName(inputDocument["image"][k]["file"].GetString()), allocator);
                                         
-                                        image.AddMember("res", inputDocument["image"][k]["file"], allocator);
+                                        image.AddMember("res", res, allocator);
                                         image.AddMember("aspect_scale", inputDocument["image"][k]["aspectScale"].GetFloat(), allocator);
                                         image.AddMember("center", inputDocument["image"][k]["center"], allocator);
                                         //                            image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
@@ -449,8 +454,9 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                     if (inputDocument["image"][j]["body"].GetInt() == i)
                     {
                         rapidjson::Value image(rapidjson::kObjectType);
+                        rapidjson::Value res(getResName(inputDocument["image"][j]["file"].GetString()), allocator);
                         
-                        image.AddMember("res", inputDocument["image"][j]["file"], allocator);
+                        image.AddMember("res", res, allocator);
                         image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
                         image.AddMember("center", inputDocument["image"][j]["center"], allocator);
                         //                            image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
