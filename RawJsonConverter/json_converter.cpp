@@ -111,6 +111,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                         
                         image.AddMember("res", res, allocator);
                         image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
+                        image.AddMember("scale", inputDocument["image"][j]["scale"].GetFloat(), allocator);
                         image.AddMember("center", inputDocument["image"][j]["center"], allocator);
                         //                        image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
                         
@@ -160,6 +161,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                         
                         image.AddMember("res", res, allocator);
                         image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
+                        image.AddMember("scale", inputDocument["image"][j]["scale"].GetFloat(), allocator);
                         image.AddMember("center", inputDocument["image"][j]["center"], allocator);
 //                        image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);                        
 
@@ -221,6 +223,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                             
                             image.AddMember("res", res, allocator);
                             image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
+                            image.AddMember("scale", inputDocument["image"][j]["scale"].GetFloat(), allocator);
                             image.AddMember("center", inputDocument["image"][j]["center"], allocator);
                             //                            image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
                             
@@ -314,6 +317,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                                         
                                         image.AddMember("res", res, allocator);
                                         image.AddMember("aspect_scale", inputDocument["image"][k]["aspectScale"].GetFloat(), allocator);
+                                        image.AddMember("scale", inputDocument["image"][k]["scale"].GetFloat(), allocator);
                                         image.AddMember("center", inputDocument["image"][k]["center"], allocator);
                                         //                            image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
                                         
@@ -395,6 +399,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                                         
                                         image.AddMember("res", res, allocator);
                                         image.AddMember("aspect_scale", inputDocument["image"][k]["aspectScale"].GetFloat(), allocator);
+                                        image.AddMember("scale", inputDocument["image"][k]["scale"].GetFloat(), allocator);
                                         image.AddMember("center", inputDocument["image"][k]["center"], allocator);
                                         //                            image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
                                         
@@ -458,6 +463,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                         
                         image.AddMember("res", res, allocator);
                         image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
+                        image.AddMember("scale", inputDocument["image"][j]["scale"].GetFloat(), allocator);
                         image.AddMember("center", inputDocument["image"][j]["center"], allocator);
                         //                            image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
                         
