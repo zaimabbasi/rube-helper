@@ -11,7 +11,7 @@
 
 int main(int argc, const char * argv[]) {
     
-    JsonConverter::buildLevelFile("resource/level_0_0.json", "target/world_0/level_0.json", 0, 0);
+    JsonConverter::buildLevelFile("resource/level_0_1.json", "target/world_0/level_1.json", 0, 1);
     
     return 0;
 }
