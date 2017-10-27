@@ -65,11 +65,26 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
         rapidjson::Value blockArray(rapidjson::kArrayType);
         rapidjson::Value platformArray(rapidjson::kArrayType);
         rapidjson::Value starArray(rapidjson::kArrayType);
+        rapidjson::Value worldSize(rapidjson::kObjectType);
+        
+        unsigned int maxX = 0, maxY = 0;
+        
+        maxX = inputDocument["body"][0]["position"]["x"].GetFloat();
+        maxY = inputDocument["body"][0]["position"]["y"].GetFloat();
         
         // FIRST PASS
         for (int i = 0; i < bodyCount; i++)
         {
             string bodyName = inputDocument["body"][i]["name"].GetString();
+            
+            if (maxX < inputDocument["body"][i]["position"]["x"].GetFloat())
+            {
+                maxX = inputDocument["body"][i]["position"]["x"].GetFloat();
+            }
+            if (maxY < inputDocument["body"][i]["position"]["y"].GetFloat())
+            {
+                maxY = inputDocument["body"][i]["position"]["y"].GetFloat();
+            }
             
             // check if its rope_structure, platform, block or star
             if (bodyName.find(STRUCTURE_STRING_LITERAL) != string::npos)
@@ -562,7 +577,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
         }
         // FOURTH PASS END
         
-//        // FIFTH PASS
+        // FIFTH PASS
         for (int i = 0; i < inputDocument["joint"].Size(); i++)
         {
             rapidjson::Value nameA(inputDocument["body"][inputDocument["joint"][i]["bodyA"].GetInt()]["name"].GetString(), allocator);
@@ -571,7 +586,29 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
             inputDocument["joint"][i].AddMember("nameA", nameA, allocator);
             inputDocument["joint"][i].AddMember("nameB", nameB, allocator);
         }
-//        // FIFTH PASS END
+        // FIFTH PASS END
+        
+        
+        // SIXTH PASS
+        for (int i = 0; i < ropeStructureArray.Size(); i++)
+        {
+            for (int j = 0; j < ropeStructureArray[i]["rope"].Size(); j++)
+            {
+                if (ropeStructureArray[i]["rope"][j].Size() == 0)
+                {
+                    ropeStructureArray[i]["rope"].PopBack();
+                }
+            }
+            
+            for (int j = 0; j < ropeStructureArray[i]["hinge"].Size(); j++)
+            {
+                if (ropeStructureArray[i]["hinge"][j].MemberCount() == 0)
+                {
+                    ropeStructureArray[i]["hinge"].PopBack();
+                }
+            }
+        }
+        // SIXTH PASS END
         
         
         rapidjson::Value fixtureArray(rapidjson::kArrayType);
@@ -581,6 +618,10 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
         outputDocument.AddMember("block", blockArray, allocator);
         outputDocument.AddMember("star", starArray, allocator);
         outputDocument.AddMember("joint", inputDocument["joint"].GetArray(), allocator);
+        
+        worldSize.AddMember("max_x", maxX, allocator);
+        worldSize.AddMember("max_y", maxY, allocator);
+        outputDocument.AddMember("world_size", worldSize, allocator);
         
         // writing to target file
         rapidjson::StringBuffer strbuf;

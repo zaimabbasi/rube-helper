@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <dirent.h>
 #include "json/document.h"
 #include "json/writer.h"
 #include "json/stringbuffer.h"
