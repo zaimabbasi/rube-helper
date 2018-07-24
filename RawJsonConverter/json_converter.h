@@ -27,6 +27,7 @@ public:
                                int world_index,
                                int level_index);
 private:
+    static int getBGIndex(std::string imageName);
     static int getRopeStructureIndex(std::string bodyName);
     static int getRopeIndex(std::string bodyName);
     static int getRopeBodyIndex(std::string bodyName);

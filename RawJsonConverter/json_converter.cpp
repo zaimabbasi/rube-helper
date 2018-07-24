@@ -18,6 +18,7 @@ string BALL_STRING_LITERAL = "ball";
 string PLATFORM_STRING_LITERAL = "platform";
 string BLOCK_STRING_LITERAL = "block";
 string STAR_STRING_LITERAL = "star";
+string BG_STRING_LITERAL = "bg";
 
 bool JsonConverter::buildLevelFile(std::string resource_path,
                                    std::string target_path,
@@ -65,12 +66,63 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
         rapidjson::Value blockArray(rapidjson::kArrayType);
         rapidjson::Value platformArray(rapidjson::kArrayType);
         rapidjson::Value starArray(rapidjson::kArrayType);
+        rapidjson::Value bgArray(rapidjson::kArrayType);
         rapidjson::Value worldSize(rapidjson::kObjectType);
         
         unsigned int maxX = 0, maxY = 0;
         
         maxX = inputDocument["body"][0]["position"]["x"].GetFloat();
         maxY = inputDocument["body"][0]["position"]["y"].GetFloat();
+        
+        
+        // ZERO PASS
+        int bgCount = 0;
+        
+        for (int i = 0; i < imageCount; ++i)
+        {
+            string imageName = inputDocument["image"][i]["name"].GetString();
+            
+            if (imageName.find(BG_STRING_LITERAL) != string::npos)
+            {
+                ++bgCount;
+            }
+        }
+        
+        bool found;
+        for (int i = 0; i < bgCount; ++i)
+        {
+            found = false;
+            string imageName;
+            int j = 0;
+            
+            for (; j < imageCount && !found; ++j)
+            {
+                imageName = inputDocument["image"][j]["name"].GetString();
+
+                if (imageName.find(BG_STRING_LITERAL) != string::npos)
+                {
+                    if (getBGIndex(imageName) == i)                                // here
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+            }
+            
+            if (found)
+            {
+                rapidjson::Value bgLayer(rapidjson::kObjectType);
+                
+                rapidjson::Value res(getResName(inputDocument["image"][j]["file"].GetString()), allocator);
+                rapidjson::Value position(rapidjson::kObjectType);
+                bgLayer.AddMember("res", res, allocator);
+                position.AddMember("x", inputDocument["image"][j]["center"]["x"].GetFloat(), allocator);
+                position.AddMember("y", inputDocument["image"][j]["center"]["y"].GetFloat(), allocator);
+                bgLayer.AddMember("position", position, allocator);
+                bgArray.PushBack(bgLayer, allocator);
+            }
+        }
+        
         
         // FIRST PASS
         for (int i = 0; i < bodyCount; i++)
@@ -613,6 +665,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
         
         rapidjson::Value fixtureArray(rapidjson::kArrayType);
         
+        outputDocument.AddMember("bg_array", bgArray, allocator);
         outputDocument.AddMember("rope_structure", ropeStructureArray, allocator);
         outputDocument.AddMember("platform", platformArray, allocator);
         outputDocument.AddMember("block", blockArray, allocator);
@@ -639,6 +692,22 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
     }
     
     return false;
+}
+
+int JsonConverter::getBGIndex(std::string imageName)
+{
+    char bgIndex[3];
+    int chItr;
+    int chItr2;
+    
+    chItr = ((int)BG_STRING_LITERAL.length()) + 1;
+    chItr2 = 0;
+    for (; imageName[chItr] != '_'; chItr++)
+    {
+        bgIndex[chItr2++] = imageName[chItr];
+    }
+    
+    return atoi(bgIndex);
 }
 
 int JsonConverter::getRopeStructureIndex(std::string bodyName)

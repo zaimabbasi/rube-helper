@@ -1379,174 +1379,6 @@
 			"body" : 25,
 			"center" : 
 			{
-				"x" : -0.25,
-				"y" : 0
-			},
-			"corners" : 
-			{
-				"x" : [ -0.5, 0.0, 0.0, -0.5 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/choco_mid.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.5, -0.25, 0.0, -0.25, 0.0, 0.25, -0.5, 0.25 ],
-			"name" : "image1",
-			"opacity" : 0.5,
-			"scale" : 0.5
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 8,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
-				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
-			},
-			"file" : "../../../../../../Project Files/Drop 'em/Resources/chain_link.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
-			"name" : "image0",
-			"opacity" : 0.5,
-			"scale" : 0.4
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 25,
-			"center" : 
-			{
-				"x" : 0.25,
-				"y" : 0
-			},
-			"corners" : 
-			{
-				"x" : [ 0.0, 0.5, 0.5, 0.0 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/choco_mid.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ 0.0, -0.25, 0.5, -0.25, 0.5, 0.25, 0.0, 0.25 ],
-			"name" : "image1",
-			"opacity" : 0.5,
-			"scale" : 0.5
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 22,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.3750, 0.3750, 0.3750, -0.3750 ],
-				"y" : [ -0.3750, -0.3750, 0.3750, 0.3750 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/alien_yellow_badge1.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.3750, -0.3750, 0.3750, -0.3750, 0.3750, 0.3750, -0.3750, 0.3750 ],
-			"name" : "image10",
-			"opacity" : 0.5,
-			"scale" : 0.75
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 0,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
-				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/chain_link.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
-			"name" : "image11",
-			"opacity" : 0.5,
-			"scale" : 0.4
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 9,
-			"center" : 
-			{
-				"x" : 0.25,
-				"y" : 0
-			},
-			"corners" : 
-			{
-				"x" : [ 0.0, 0.5, 0.5, 0.0 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/choco_mid.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ 0.0, -0.25, 0.5, -0.25, 0.5, 0.25, 0.0, 0.25 ],
-			"name" : "image9",
-			"opacity" : 0.5,
-			"scale" : 0.5
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 24,
-			"center" : 
-			{
-				"x" : -1.25,
-				"y" : 0
-			},
-			"corners" : 
-			{
-				"x" : [ -1.5, -1, -1, -1.5 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/choco_left.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -1.5, -0.25, -1, -0.25, -1, 0.25, -1.5, 0.25 ],
-			"name" : "image7",
-			"opacity" : 0.5,
-			"scale" : 0.5
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 21,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
-				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/chain_link.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
-			"name" : "image11",
-			"opacity" : 0.5,
-			"scale" : 0.4
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 25,
-			"center" : 
-			{
 				"x" : -1.25,
 				"y" : 0.5
 			},
@@ -1555,7 +1387,7 @@
 				"x" : [ -1.5, -1, -1, -1.5 ],
 				"y" : [ 0.25, 0.25, 0.75, 0.75 ]
 			},
-			"file" : "../../../../Resources/small_resources/game/choco_left.png",
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_left.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
@@ -1567,23 +1399,99 @@
 		
 		{
 			"aspectScale" : 1,
-			"body" : 14,
+			"body" : 26,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 20,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 17,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.25, 0.25, 0.25, -0.25 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/star_0.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.25, -0.25, 0.25, -0.25, 0.25, 0.25, -0.25, 0.25 ],
+			"name" : "image13",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 11,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../../_Mobile/Drop 'em/Resources/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 24,
 			"center" : 
 			{
-				"x" : -1,
+				"x" : 0.75,
 				"y" : 0
 			},
 			"corners" : 
 			{
-				"x" : [ -1.25, -0.75, -0.75, -1.25 ],
+				"x" : [ 0.5, 1, 1, 0.5 ],
 				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
 			},
-			"file" : "../../../../Resources/small_resources/game/choco_left.png",
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_mid.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -1.25, -0.25, -0.75, -0.25, -0.75, 0.25, -1.25, 0.25 ],
-			"name" : "image7",
+			"glVertexPointer" : [ 0.5, -0.25, 1, -0.25, 1, 0.25, 0.5, 0.25 ],
+			"name" : "image9",
 			"opacity" : 0.5,
 			"scale" : 0.5
 		},
@@ -1601,7 +1509,7 @@
 				"x" : [ 0.5, 1, 1, 0.5 ],
 				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
 			},
-			"file" : "../../../../Resources/small_resources/game/choco_mid.png",
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_mid.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
@@ -1613,162 +1521,60 @@
 		
 		{
 			"aspectScale" : 1,
+			"body" : -1,
+			"center" : 
+			{
+				"x" : 8,
+				"y" : 4.5
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-6.822677612304688,
+					22.82267761230469,
+					22.82267761230469,
+					-6.822677612304688
+				],
+				"y" : [ -1.5, -1.5, 10.50, 10.50 ]
+			},
+			"file" : "../../../Drop 'em/Resources/large_resources/backgrounds/desert_3.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-6.822677612304688,
+				-1.5,
+				22.82267761230469,
+				-1.5,
+				22.82267761230469,
+				10.50,
+				-6.822677612304688,
+				10.50
+			],
+			"name" : "bg_3",
+			"opacity" : 0.5,
+			"scale" : 12.0
+		},
+		
+		{
+			"aspectScale" : 1,
 			"body" : 5,
 			"center" : 0,
 			"corners" : 
 			{
-				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
 				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
 			},
-			"file" : "../../../../../../Project Files/Drop 'em/Resources/chain_link.png",
+			"file" : "../../../../_Mobile/Drop 'em/Resources/chain_link.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
 			"name" : "image0",
 			"opacity" : 0.5,
 			"scale" : 0.4
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 14,
-			"center" : 
-			{
-				"x" : 1,
-				"y" : 0
-			},
-			"corners" : 
-			{
-				"x" : [ 0.75, 1.25, 1.25, 0.75 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/choco_right.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ 0.75, -0.25, 1.25, -0.25, 1.25, 0.25, 0.75, 0.25 ],
-			"name" : "image8",
-			"opacity" : 0.5,
-			"scale" : 0.5
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 24,
-			"center" : 
-			{
-				"x" : 0.75,
-				"y" : 0
-			},
-			"corners" : 
-			{
-				"x" : [ 0.5, 1, 1, 0.5 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/choco_mid.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ 0.5, -0.25, 1, -0.25, 1, 0.25, 0.5, 0.25 ],
-			"name" : "image9",
-			"opacity" : 0.5,
-			"scale" : 0.5
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 17,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.25, 0.25, 0.25, -0.25 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/star_0.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.25, -0.25, 0.25, -0.25, 0.25, 0.25, -0.25, 0.25 ],
-			"name" : "image13",
-			"opacity" : 0.5,
-			"scale" : 0.5
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 30,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
-				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/chain_link.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
-			"name" : "image11",
-			"opacity" : 0.5,
-			"scale" : 0.4
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 18,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
-				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/chain_link.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
-			"name" : "image11",
-			"opacity" : 0.5,
-			"scale" : 0.4
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 6,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.3750, 0.3750, 0.3750, -0.3750 ],
-				"y" : [ -0.3750, -0.3750, 0.3750, 0.3750 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/alien_yellow_badge1.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.3750, -0.3750, 0.3750, -0.3750, 0.3750, 0.3750, -0.3750, 0.3750 ],
-			"name" : "image10",
-			"opacity" : 0.5,
-			"scale" : 0.75
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 13,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.3, 0.3, 0.3, -0.3 ],
-				"y" : [ -0.3, -0.3, 0.3, 0.3 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/chain_hinge.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.3, -0.3, 0.3, -0.3, 0.3, 0.3, -0.3, 0.3 ],
-			"name" : "image5",
-			"opacity" : 0.5,
-			"scale" : 0.6
 		},
 		
 		{
@@ -1780,7 +1586,7 @@
 				"x" : [ -0.45, 0.45, 0.45, -0.45 ],
 				"y" : [ -0.45, -0.45, 0.45, 0.45 ]
 			},
-			"file" : "../../../../Resources/small_resources/game/slime_block.png",
+			"file" : "../../../Drop 'em/Resources/large_resources/game/block_1.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
@@ -1792,14 +1598,60 @@
 		
 		{
 			"aspectScale" : 1,
-			"body" : 20,
+			"body" : 24,
+			"center" : 
+			{
+				"x" : -0.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ -0.5, 0.0, 0.0, -0.5 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.5, -0.25, 0.0, -0.25, 0.0, 0.25, -0.5, 0.25 ],
+			"name" : "image9",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 24,
+			"center" : 
+			{
+				"x" : 1.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 1, 1.5, 1.5, 1 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_right.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 1, -0.25, 1.5, -0.25, 1.5, 0.25, 1, 0.25 ],
+			"name" : "image8",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 31,
 			"center" : 0,
 			"corners" : 
 			{
 				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
 				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
 			},
-			"file" : "../../../../Resources/small_resources/game/chain_link.png",
+			"file" : "../../../Drop 'em/Resources/small_resources/game/chain_link.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
@@ -1807,6 +1659,29 @@
 			"name" : "image11",
 			"opacity" : 0.5,
 			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 25,
+			"center" : 
+			{
+				"x" : -0.75,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ -1, -0.5, -0.5, -1 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_hill_right_2.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -1, -0.25, -0.5, -0.25, -0.5, 0.25, -1, 0.25 ],
+			"name" : "image4",
+			"opacity" : 0.5,
+			"scale" : 0.5
 		},
 		
 		{
@@ -1822,7 +1697,7 @@
 				"x" : [ -1, -0.5, -0.5, -1 ],
 				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
 			},
-			"file" : "../../../../Resources/small_resources/game/choco_mid.png",
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_mid.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
@@ -1834,21 +1709,21 @@
 		
 		{
 			"aspectScale" : 1,
-			"body" : 3,
+			"body" : 22,
 			"center" : 0,
 			"corners" : 
 			{
-				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
-				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+				"x" : [ -0.3750, 0.3750, 0.3750, -0.3750 ],
+				"y" : [ -0.3750, -0.3750, 0.3750, 0.3750 ]
 			},
-			"file" : "../../../../../../Project Files/Drop 'em/Resources/chain_link.png",
+			"file" : "../../../Drop 'em/Resources/large_resources/game/jammer_3.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
-			"name" : "image0",
+			"glVertexPointer" : [ -0.3750, -0.3750, 0.3750, -0.3750, 0.3750, 0.3750, -0.3750, 0.3750 ],
+			"name" : "image10",
 			"opacity" : 0.5,
-			"scale" : 0.4
+			"scale" : 0.75
 		},
 		
 		{
@@ -1856,22 +1731,155 @@
 			"body" : 25,
 			"center" : 
 			{
-				"x" : 1.25,
+				"x" : -0.25,
 				"y" : 0
 			},
 			"corners" : 
 			{
-				"x" : [ 1, 1.5, 1.5, 1 ],
+				"x" : [ -0.5, 0.0, 0.0, -0.5 ],
 				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
 			},
-			"file" : "../../../../Resources/small_resources/game/choco_right.png",
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_mid.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ 1, -0.25, 1.5, -0.25, 1.5, 0.25, 1, 0.25 ],
-			"name" : "image0",
+			"glVertexPointer" : [ -0.5, -0.25, 0.0, -0.25, 0.0, 0.25, -0.5, 0.25 ],
+			"name" : "image1",
 			"opacity" : 0.5,
 			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 19,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 13,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.3, 0.3, 0.3, -0.3 ],
+				"y" : [ -0.3, -0.3, 0.3, 0.3 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/chain_hinge.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.3, -0.3, 0.3, -0.3, 0.3, 0.3, -0.3, 0.3 ],
+			"name" : "image5",
+			"opacity" : 0.5,
+			"scale" : 0.6
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 0,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 27,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 4,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.35, 0.35, 0.35, -0.35 ],
+				"y" : [ -0.35, -0.35, 0.35, 0.35 ]
+			},
+			"file" : "../../../Drop 'em/Resources/large_resources/game/block_4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.35, -0.35, 0.35, -0.35, 0.35, 0.35, -0.35, 0.35 ],
+			"name" : "image14",
+			"opacity" : 0.5,
+			"scale" : 0.7
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 1,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../../_Mobile/Drop 'em/Resources/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 6,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.3750, 0.3750, 0.3750, -0.3750 ],
+				"y" : [ -0.3750, -0.3750, 0.3750, 0.3750 ]
+			},
+			"file" : "../../../Drop 'em/Resources/large_resources/game/jammer_2.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.3750, -0.3750, 0.3750, -0.3750, 0.3750, 0.3750, -0.3750, 0.3750 ],
+			"name" : "image10",
+			"opacity" : 0.5,
+			"scale" : 0.75
 		},
 		
 		{
@@ -1887,7 +1895,7 @@
 				"x" : [ 0.0, 0.5, 0.5, 0.0 ],
 				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
 			},
-			"file" : "../../../../Resources/small_resources/game/choco_mid.png",
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_mid.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
@@ -1899,21 +1907,82 @@
 		
 		{
 			"aspectScale" : 1,
-			"body" : 7,
-			"center" : 0,
+			"body" : 9,
+			"center" : 
+			{
+				"x" : -0.25,
+				"y" : 0
+			},
 			"corners" : 
 			{
-				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
-				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+				"x" : [ -0.5, 0.0, 0.0, -0.5 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
 			},
-			"file" : "../../../../../../Project Files/Drop 'em/Resources/chain_link.png",
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_mid.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
+			"glVertexPointer" : [ -0.5, -0.25, 0.0, -0.25, 0.0, 0.25, -0.5, 0.25 ],
+			"name" : "image9",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 8,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../../_Mobile/Drop 'em/Resources/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
 			"name" : "image0",
 			"opacity" : 0.5,
 			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 2,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.3, 0.3, 0.3, -0.3 ],
+				"y" : [ -0.3, -0.3, 0.3, 0.3 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/chain_hinge.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.3, -0.3, 0.3, -0.3, 0.3, 0.3, -0.3, 0.3 ],
+			"name" : "image5",
+			"opacity" : 0.5,
+			"scale" : 0.6
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 29,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.3, 0.3, 0.3, -0.3 ],
+				"y" : [ -0.3, -0.3, 0.3, 0.3 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/chain_hinge.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.3, -0.3, 0.3, -0.3, 0.3, 0.3, -0.3, 0.3 ],
+			"name" : "image12",
+			"opacity" : 0.5,
+			"scale" : 0.6
 		},
 		
 		{
@@ -1929,7 +1998,7 @@
 				"x" : [ -0.75, -0.25, -0.25, -0.75 ],
 				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
 			},
-			"file" : "../../../../Resources/small_resources/game/choco_mid.png",
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_mid.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
@@ -1941,14 +2010,14 @@
 		
 		{
 			"aspectScale" : 1,
-			"body" : 27,
+			"body" : 30,
 			"center" : 0,
 			"corners" : 
 			{
 				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
 				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
 			},
-			"file" : "../../../../Resources/small_resources/game/chain_link.png",
+			"file" : "../../../Drop 'em/Resources/small_resources/game/chain_link.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
@@ -1956,6 +2025,48 @@
 			"name" : "image11",
 			"opacity" : 0.5,
 			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 9,
+			"center" : 
+			{
+				"x" : -0.75,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ -1, -0.5, -0.5, -1 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_left.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -1, -0.25, -0.5, -0.25, -0.5, 0.25, -1, 0.25 ],
+			"name" : "image7",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 28,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.3, 0.3, 0.3, -0.3 ],
+				"y" : [ -0.3, -0.3, 0.3, 0.3 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/chain_hinge.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.3, -0.3, 0.3, -0.3, 0.3, 0.3, -0.3, 0.3 ],
+			"name" : "image12",
+			"opacity" : 0.5,
+			"scale" : 0.6
 		},
 		
 		{
@@ -1977,7 +2088,7 @@
 				],
 				"y" : [ 0.25, 0.25, 0.75, 0.75 ]
 			},
-			"file" : "../../../../Resources/small_resources/game/choco_hill_right.png",
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_hill_right.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
@@ -1999,231 +2110,6 @@
 		
 		{
 			"aspectScale" : 1,
-			"body" : 24,
-			"center" : 
-			{
-				"x" : -0.25,
-				"y" : 0
-			},
-			"corners" : 
-			{
-				"x" : [ -0.5, 0.0, 0.0, -0.5 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/choco_mid.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.5, -0.25, 0.0, -0.25, 0.0, 0.25, -0.5, 0.25 ],
-			"name" : "image9",
-			"opacity" : 0.5,
-			"scale" : 0.5
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 14,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.25, 0.25, 0.25, -0.25 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/choco_mid.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.25, -0.25, 0.25, -0.25, 0.25, 0.25, -0.25, 0.25 ],
-			"name" : "image9",
-			"opacity" : 0.5,
-			"scale" : 0.5
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 12,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
-				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
-			},
-			"file" : "../../../../../../Project Files/Drop 'em/Resources/chain_link.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
-			"name" : "image0",
-			"opacity" : 0.5,
-			"scale" : 0.4
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 14,
-			"center" : 
-			{
-				"x" : 0.5,
-				"y" : 0
-			},
-			"corners" : 
-			{
-				"x" : [ 0.25, 0.75, 0.75, 0.25 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/choco_mid.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ 0.25, -0.25, 0.75, -0.25, 0.75, 0.25, 0.25, 0.25 ],
-			"name" : "image9",
-			"opacity" : 0.5,
-			"scale" : 0.5
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 16,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.25, 0.25, 0.25, -0.25 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/star_0.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.25, -0.25, 0.25, -0.25, 0.25, 0.25, -0.25, 0.25 ],
-			"name" : "image13",
-			"opacity" : 0.5,
-			"scale" : 0.5
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 26,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
-				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/chain_link.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
-			"name" : "image11",
-			"opacity" : 0.5,
-			"scale" : 0.4
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 4,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.35, 0.35, 0.35, -0.35 ],
-				"y" : [ -0.35, -0.35, 0.35, 0.35 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/slime_block_dead.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.35, -0.35, 0.35, -0.35, 0.35, 0.35, -0.35, 0.35 ],
-			"name" : "image14",
-			"opacity" : 0.5,
-			"scale" : 0.7
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 15,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.25, 0.25, 0.25, -0.25 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/star_0.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.25, -0.25, 0.25, -0.25, 0.25, 0.25, -0.25, 0.25 ],
-			"name" : "image13",
-			"opacity" : 0.5,
-			"scale" : 0.5
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 24,
-			"center" : 
-			{
-				"x" : 1.25,
-				"y" : 0
-			},
-			"corners" : 
-			{
-				"x" : [ 1, 1.5, 1.5, 1 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/choco_right.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ 1, -0.25, 1.5, -0.25, 1.5, 0.25, 1, 0.25 ],
-			"name" : "image8",
-			"opacity" : 0.5,
-			"scale" : 0.5
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 9,
-			"center" : 
-			{
-				"x" : -0.25,
-				"y" : 0
-			},
-			"corners" : 
-			{
-				"x" : [ -0.5, 0.0, 0.0, -0.5 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/choco_mid.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.5, -0.25, 0.0, -0.25, 0.0, 0.25, -0.5, 0.25 ],
-			"name" : "image9",
-			"opacity" : 0.5,
-			"scale" : 0.5
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 10,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
-				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
-			},
-			"file" : "../../../../../../Project Files/Drop 'em/Resources/chain_link.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
-			"name" : "image0",
-			"opacity" : 0.5,
-			"scale" : 0.4
-		},
-		
-		{
-			"aspectScale" : 1,
 			"body" : 25,
 			"center" : 
 			{
@@ -2235,7 +2121,7 @@
 				"x" : [ -1.5, -1, -1, -1.5 ],
 				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
 			},
-			"file" : "../../../../Resources/small_resources/game/choco_center.png",
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_center.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
@@ -2247,162 +2133,41 @@
 		
 		{
 			"aspectScale" : 1,
-			"body" : 11,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
-				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
-			},
-			"file" : "../../../../../../Project Files/Drop 'em/Resources/chain_link.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
-			"name" : "image0",
-			"opacity" : 0.5,
-			"scale" : 0.4
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 29,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.3, 0.3, 0.3, -0.3 ],
-				"y" : [ -0.3, -0.3, 0.3, 0.3 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/chain_hinge.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.3, -0.3, 0.3, -0.3, 0.3, 0.3, -0.3, 0.3 ],
-			"name" : "image12",
-			"opacity" : 0.5,
-			"scale" : 0.6
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 19,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
-				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/chain_link.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
-			"name" : "image11",
-			"opacity" : 0.5,
-			"scale" : 0.4
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 9,
+			"body" : -1,
 			"center" : 
 			{
-				"x" : -0.75,
-				"y" : 0
+				"x" : 8,
+				"y" : 4.5
 			},
 			"corners" : 
 			{
-				"x" : [ -1, -0.5, -0.5, -1 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+				"x" : 
+				[
+					-16.53293418884277,
+					32.53293609619141,
+					32.53293609619141,
+					-16.53293418884277
+				],
+				"y" : [ -1.5, -1.5, 10.50, 10.50 ]
 			},
-			"file" : "../../../../Resources/small_resources/game/choco_left.png",
+			"file" : "../../../Drop 'em/Resources/large_resources/backgrounds/desert_2.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -1, -0.25, -0.5, -0.25, -0.5, 0.25, -1, 0.25 ],
-			"name" : "image7",
+			"glVertexPointer" : 
+			[
+				-16.53293418884277,
+				-1.5,
+				32.53293609619141,
+				-1.5,
+				32.53293609619141,
+				10.50,
+				-16.53293418884277,
+				10.50
+			],
+			"name" : "bg_2",
 			"opacity" : 0.5,
-			"scale" : 0.5
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 31,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
-				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/chain_link.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
-			"name" : "image11",
-			"opacity" : 0.5,
-			"scale" : 0.4
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 28,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.3, 0.3, 0.3, -0.3 ],
-				"y" : [ -0.3, -0.3, 0.3, 0.3 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/chain_hinge.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.3, -0.3, 0.3, -0.3, 0.3, 0.3, -0.3, 0.3 ],
-			"name" : "image12",
-			"opacity" : 0.5,
-			"scale" : 0.6
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 2,
-			"center" : 0,
-			"corners" : 
-			{
-				"x" : [ -0.3, 0.3, 0.3, -0.3 ],
-				"y" : [ -0.3, -0.3, 0.3, 0.3 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/chain_hinge.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -0.3, -0.3, 0.3, -0.3, 0.3, 0.3, -0.3, 0.3 ],
-			"name" : "image5",
-			"opacity" : 0.5,
-			"scale" : 0.6
-		},
-		
-		{
-			"aspectScale" : 1,
-			"body" : 25,
-			"center" : 
-			{
-				"x" : -0.75,
-				"y" : 0
-			},
-			"corners" : 
-			{
-				"x" : [ -1, -0.5, -0.5, -1 ],
-				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
-			},
-			"file" : "../../../../Resources/small_resources/game/choco_hill_right_2.png",
-			"filter" : 1,
-			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
-			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -1, -0.25, -0.5, -0.25, -0.5, 0.25, -1, 0.25 ],
-			"name" : "image4",
-			"opacity" : 0.5,
-			"scale" : 0.5
+			"scale" : 12.0
 		},
 		
 		{
@@ -2418,7 +2183,7 @@
 				"x" : [ 0.5, 1, 1, 0.5 ],
 				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
 			},
-			"file" : "../../../../Resources/small_resources/game/choco_right.png",
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_right.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
@@ -2430,21 +2195,412 @@
 		
 		{
 			"aspectScale" : 1,
-			"body" : 1,
+			"body" : 12,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../../_Mobile/Drop 'em/Resources/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 14,
+			"center" : 
+			{
+				"x" : -1,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ -1.25, -0.75, -0.75, -1.25 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_left.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -1.25, -0.25, -0.75, -0.25, -0.75, 0.25, -1.25, 0.25 ],
+			"name" : "image7",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : -1,
+			"center" : 
+			{
+				"x" : 8,
+				"y" : 6
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					0.001301765441894531,
+					15.99869823455811,
+					15.99869823455811,
+					0.001301765441894531
+				],
+				"y" : [ 0.0, 0.0, 12.0, 12.0 ]
+			},
+			"file" : "../../../Drop 'em/Resources/large_resources/backgrounds/sky_day.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				0.001301765441894531,
+				0.0,
+				15.99869823455811,
+				0.0,
+				15.99869823455811,
+				12.0,
+				0.001301765441894531,
+				12.0
+			],
+			"name" : "bg_0",
+			"opacity" : 0.5,
+			"scale" : 12.0
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 21,
 			"center" : 0,
 			"corners" : 
 			{
 				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
 				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
 			},
-			"file" : "../../../../../../Project Files/Drop 'em/Resources/chain_link.png",
+			"file" : "../../../Drop 'em/Resources/small_resources/game/chain_link.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
 			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 3,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../../_Mobile/Drop 'em/Resources/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
 			"name" : "image0",
 			"opacity" : 0.5,
 			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 14,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.25, 0.25, 0.25, -0.25 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.25, -0.25, 0.25, -0.25, 0.25, 0.25, -0.25, 0.25 ],
+			"name" : "image9",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : -1,
+			"center" : 
+			{
+				"x" : 8,
+				"y" : 5
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-17.76100540161133,
+					33.76100540161133,
+					33.76100540161133,
+					-17.76100540161133
+				],
+				"y" : [ -1, -1, 11.0, 11.0 ]
+			},
+			"file" : "../../../Drop 'em/Resources/large_resources/backgrounds/desert_1.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-17.76100540161133,
+				-1,
+				33.76100540161133,
+				-1,
+				33.76100540161133,
+				11.0,
+				-17.76100540161133,
+				11.0
+			],
+			"name" : "bg_1",
+			"opacity" : 0.5,
+			"scale" : 12.0
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 14,
+			"center" : 
+			{
+				"x" : 1,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 0.75, 1.25, 1.25, 0.75 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_right.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 0.75, -0.25, 1.25, -0.25, 1.25, 0.25, 0.75, 0.25 ],
+			"name" : "image8",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 10,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../../_Mobile/Drop 'em/Resources/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 9,
+			"center" : 
+			{
+				"x" : 0.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 0.0, 0.5, 0.5, 0.0 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 0.0, -0.25, 0.5, -0.25, 0.5, 0.25, 0.0, 0.25 ],
+			"name" : "image9",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 25,
+			"center" : 
+			{
+				"x" : 0.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 0.0, 0.5, 0.5, 0.0 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 0.0, -0.25, 0.5, -0.25, 0.5, 0.25, 0.0, 0.25 ],
+			"name" : "image1",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 15,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.25, 0.25, 0.25, -0.25 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/star_0.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.25, -0.25, 0.25, -0.25, 0.25, 0.25, -0.25, 0.25 ],
+			"name" : "image13",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 14,
+			"center" : 
+			{
+				"x" : 0.5,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 0.25, 0.75, 0.75, 0.25 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 0.25, -0.25, 0.75, -0.25, 0.75, 0.25, 0.25, 0.25 ],
+			"name" : "image9",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 7,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../../_Mobile/Drop 'em/Resources/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 18,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.1, 0.1, 0.1, -0.1 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.1, -0.2, 0.1, -0.2, 0.1, 0.2, -0.1, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 16,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.25, 0.25, 0.25, -0.25 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/star_0.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.25, -0.25, 0.25, -0.25, 0.25, 0.25, -0.25, 0.25 ],
+			"name" : "image13",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 24,
+			"center" : 
+			{
+				"x" : -1.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ -1.5, -1, -1, -1.5 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_left.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -1.5, -0.25, -1, -0.25, -1, 0.25, -1.5, 0.25 ],
+			"name" : "image7",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 25,
+			"center" : 
+			{
+				"x" : 1.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 1, 1.5, 1.5, 1 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Drop 'em/Resources/small_resources/game/choco_right.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 1, -0.25, 1.5, -0.25, 1.5, 0.25, 1, 0.25 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 0.5
 		}
 	],
 	"joint" : 
