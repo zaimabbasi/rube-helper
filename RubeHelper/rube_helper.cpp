@@ -52,62 +52,12 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
         rapidjson::Value blocks_array(rapidjson::kArrayType);
         rapidjson::Value platforms_array(rapidjson::kArrayType);
         rapidjson::Value stars_array(rapidjson::kArrayType);
-//        rapidjson::Value bgArray(rapidjson::kArrayType);
         rapidjson::Value world_size(rapidjson::kObjectType);
         
         unsigned int maxX = 0, maxY = 0;
         
         maxX = input_document["body"][0]["position"]["x"].GetFloat();
         maxY = input_document["body"][0]["position"]["y"].GetFloat();
-        
-        
-//        // ZERO PASS
-//        int bgCount = 0;
-//
-//        for (int i = 0; i < image_count; ++i)
-//        {
-//            string imageName = input_document["image"][i]["name"].GetString();
-//
-//            if (imageName.find(background) != string::npos)
-//            {
-//                ++bgCount;
-//            }
-//        }
-        
-//        bool found;
-//        for (int i = 0; i < bgCount; ++i)
-//        {
-//            found = false;
-//            string imageName;
-//            int j = 0;
-//
-//            for (; j < imageCount && !found; ++j)
-//            {
-//                imageName = inputDocument["image"][j]["name"].GetString();
-//
-//                if (imageName.find(background) != string::npos)
-//                {
-//                    if (background_id(imageName) == i)                                // here
-//                    {
-//                        found = true;
-//                        break;
-//                    }
-//                }
-//            }
-//
-//            if (found)
-//            {
-////                rapidjson::Value bgLayer(rapidjson::kObjectType);
-//
-//                rapidjson::Value res(res_name(inputDocument["image"][j]["file"].GetString()), allocator);
-//                rapidjson::Value position(rapidjson::kObjectType);
-//                bgLayer.AddMember("res", res, allocator);
-//                position.AddMember("x", inputDocument["image"][j]["center"]["x"].GetFloat(), allocator);
-//                position.AddMember("y", inputDocument["image"][j]["center"]["y"].GetFloat(), allocator);
-//                bgLayer.AddMember("position", position, allocator);
-//                bgArray.PushBack(bgLayer, allocator);
-//            }
-//        }
         
         
         // ZERO PASS
@@ -647,10 +597,6 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
         }
         // SIXTH PASS END
         
-        
-//        rapidjson::Value fixtures_array(rapidjson::kArrayType);
-        
-//        outputDocument.AddMember("bg_array", bgArray, allocator);
         output_document.AddMember("rope_structure", rope_structures_array, allocator);
         output_document.AddMember("platform", platforms_array, allocator);
         output_document.AddMember("block", blocks_array, allocator);
