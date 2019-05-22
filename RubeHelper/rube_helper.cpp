@@ -3,7 +3,7 @@
 string structure = "structure";
 string rope_literal = "rope";
 string hinge = "hinge";
-string ball = "ball";
+string jammer = "ball";
 string platform = "platform";
 string block = "block";
 string star = "star";
@@ -11,340 +11,340 @@ string background = "background";
 
 bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int world_id, int level_id)
 {
-    ifstream inputFile;
-    inputFile.open(res_path);
+    ifstream input_file;
+    input_file.open(res_path);
     
-    if (inputFile.is_open())
+    if (input_file.is_open())
     {
         // reading source file
-        char readChar;
-        string readString;
-        inputFile >> readChar;
-        while (!inputFile.eof())
+        char read_char;
+        string read_string;
+        input_file >> read_char;
+        while (!input_file.eof())
         {
-            readString.append(&readChar, 1);
-            inputFile >> readChar;
+            read_string.append(&read_char, 1);
+            input_file >> read_char;
         }
         
-        inputFile.close();
+        input_file.close();
         
-        rapidjson::Document inputDocument;
-        inputDocument.Parse<0>(readString.c_str());
+        rapidjson::Document input_document;
+        input_document.Parse<0>(read_string.c_str());
         
         // manipulating JSON document
-        int bodyCount = inputDocument["body"].Size();
-        int imageCount = inputDocument["image"].Size();
+        int body_count = input_document["body"].Size();
+        int image_count = input_document["image"].Size();
         
         // document is the root of a json message
-        rapidjson::Document outputDocument;
+        rapidjson::Document output_document;
         
         // define the document as an object rather than an array
-        outputDocument.SetObject();
+        output_document.SetObject();
         
         // must pass an allocator when the object may need to allocate memory
-        rapidjson::Document::AllocatorType& allocator = outputDocument.GetAllocator();
+        rapidjson::Document::AllocatorType& allocator = output_document.GetAllocator();
         
         // insert top level members
-        outputDocument.AddMember("world_index", world_id, allocator);
-        outputDocument.AddMember("level_index", level_id, allocator);
+        output_document.AddMember("world_id", world_id, allocator);
+        output_document.AddMember("level_id", level_id, allocator);
         
-        rapidjson::Value ropeStructureArray(rapidjson::kArrayType);
-        rapidjson::Value blockArray(rapidjson::kArrayType);
-        rapidjson::Value platformArray(rapidjson::kArrayType);
-        rapidjson::Value starArray(rapidjson::kArrayType);
-        rapidjson::Value bgArray(rapidjson::kArrayType);
-        rapidjson::Value worldSize(rapidjson::kObjectType);
+        rapidjson::Value rope_structures_array(rapidjson::kArrayType);
+        rapidjson::Value blocks_array(rapidjson::kArrayType);
+        rapidjson::Value platforms_array(rapidjson::kArrayType);
+        rapidjson::Value stars_array(rapidjson::kArrayType);
+//        rapidjson::Value bgArray(rapidjson::kArrayType);
+        rapidjson::Value world_size(rapidjson::kObjectType);
         
         unsigned int maxX = 0, maxY = 0;
         
-        maxX = inputDocument["body"][0]["position"]["x"].GetFloat();
-        maxY = inputDocument["body"][0]["position"]["y"].GetFloat();
+        maxX = input_document["body"][0]["position"]["x"].GetFloat();
+        maxY = input_document["body"][0]["position"]["y"].GetFloat();
+        
+        
+//        // ZERO PASS
+//        int bgCount = 0;
+//
+//        for (int i = 0; i < image_count; ++i)
+//        {
+//            string imageName = input_document["image"][i]["name"].GetString();
+//
+//            if (imageName.find(background) != string::npos)
+//            {
+//                ++bgCount;
+//            }
+//        }
+        
+//        bool found;
+//        for (int i = 0; i < bgCount; ++i)
+//        {
+//            found = false;
+//            string imageName;
+//            int j = 0;
+//
+//            for (; j < imageCount && !found; ++j)
+//            {
+//                imageName = inputDocument["image"][j]["name"].GetString();
+//
+//                if (imageName.find(background) != string::npos)
+//                {
+//                    if (background_id(imageName) == i)                                // here
+//                    {
+//                        found = true;
+//                        break;
+//                    }
+//                }
+//            }
+//
+//            if (found)
+//            {
+////                rapidjson::Value bgLayer(rapidjson::kObjectType);
+//
+//                rapidjson::Value res(res_name(inputDocument["image"][j]["file"].GetString()), allocator);
+//                rapidjson::Value position(rapidjson::kObjectType);
+//                bgLayer.AddMember("res", res, allocator);
+//                position.AddMember("x", inputDocument["image"][j]["center"]["x"].GetFloat(), allocator);
+//                position.AddMember("y", inputDocument["image"][j]["center"]["y"].GetFloat(), allocator);
+//                bgLayer.AddMember("position", position, allocator);
+//                bgArray.PushBack(bgLayer, allocator);
+//            }
+//        }
         
         
         // ZERO PASS
-        int bgCount = 0;
-        
-        for (int i = 0; i < imageCount; ++i)
+        for (int i = 0; i < body_count; i++)
         {
-            string imageName = inputDocument["image"][i]["name"].GetString();
+            string body_name = input_document["body"][i]["name"].GetString();
             
-            if (imageName.find(background) != string::npos)
+            if (maxX < input_document["body"][i]["position"]["x"].GetFloat())
             {
-                ++bgCount;
+                maxX = input_document["body"][i]["position"]["x"].GetFloat();
             }
-        }
-        
-        bool found;
-        for (int i = 0; i < bgCount; ++i)
-        {
-            found = false;
-            string imageName;
-            int j = 0;
-            
-            for (; j < imageCount && !found; ++j)
+            if (maxY < input_document["body"][i]["position"]["y"].GetFloat())
             {
-                imageName = inputDocument["image"][j]["name"].GetString();
-
-                if (imageName.find(background) != string::npos)
-                {
-                    if (background_id(imageName) == i)                                // here
-                    {
-                        found = true;
-                        break;
-                    }
-                }
-            }
-            
-            if (found)
-            {
-                rapidjson::Value bgLayer(rapidjson::kObjectType);
-                
-                rapidjson::Value res(res_name(inputDocument["image"][j]["file"].GetString()), allocator);
-                rapidjson::Value position(rapidjson::kObjectType);
-                bgLayer.AddMember("res", res, allocator);
-                position.AddMember("x", inputDocument["image"][j]["center"]["x"].GetFloat(), allocator);
-                position.AddMember("y", inputDocument["image"][j]["center"]["y"].GetFloat(), allocator);
-                bgLayer.AddMember("position", position, allocator);
-                bgArray.PushBack(bgLayer, allocator);
-            }
-        }
-        
-        
-        // FIRST PASS
-        for (int i = 0; i < bodyCount; i++)
-        {
-            string bodyName = inputDocument["body"][i]["name"].GetString();
-            
-            if (maxX < inputDocument["body"][i]["position"]["x"].GetFloat())
-            {
-                maxX = inputDocument["body"][i]["position"]["x"].GetFloat();
-            }
-            if (maxY < inputDocument["body"][i]["position"]["y"].GetFloat())
-            {
-                maxY = inputDocument["body"][i]["position"]["y"].GetFloat();
+                maxY = input_document["body"][i]["position"]["y"].GetFloat();
             }
             
             // check if its rope_structure, platform, block or star
-            if (bodyName.find(structure) != string::npos)
+            if (body_name.find(structure) != string::npos)
             {
-                if (bodyName.find(ball) != string::npos)
+                if (body_name.find(jammer) != string::npos)
                 {
-                    // its a ball body
-                    rapidjson::Value ball(rapidjson::kObjectType);
-                    ropeStructureArray.PushBack(ball, allocator);
+                    // its a jammer body
+                    rapidjson::Value jammer(rapidjson::kObjectType);
+                    rope_structures_array.PushBack(jammer, allocator);
                 }
             }
-            else if (bodyName.find(block) != string::npos)
+            else if (body_name.find(block) != string::npos)
             {
                 rapidjson::Value block(rapidjson::kObjectType);
                 rapidjson::Value position(rapidjson::kObjectType);
-                rapidjson::Value fixtureArray(rapidjson::kArrayType);
-                rapidjson::Value imageArray(rapidjson::kArrayType);
+                rapidjson::Value fixtures_array(rapidjson::kArrayType);
+                rapidjson::Value images_array(rapidjson::kArrayType);
                 
                 block.AddMember("global_index", i, allocator);
                 
-                position.AddMember("x", inputDocument["body"][i]["position"]["x"].GetFloat(), allocator);
-                position.AddMember("y", inputDocument["body"][i]["position"]["y"].GetFloat(), allocator);
+                position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
+                position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
                 block.AddMember("position", position, allocator);
-                block.AddMember("type", inputDocument["body"][i]["type"].GetInt(), allocator);
-                block.AddMember("angle", inputDocument["body"][i]["angle"].GetFloat(), allocator);
+                block.AddMember("type", input_document["body"][i]["type"].GetInt(), allocator);
+                block.AddMember("angle", input_document["body"][i]["angle"].GetFloat(), allocator);
                 
-                for (int j = 0; j < inputDocument["body"][i]["fixture"].Size(); j++)
+                for (int j = 0; j < input_document["body"][i]["fixture"].Size(); j++)
                 {
-                    fixtureArray.PushBack(inputDocument["body"][i]["fixture"][j], allocator);
-                    fixtureArray[j].RemoveMember("name");
+                    fixtures_array.PushBack(input_document["body"][i]["fixture"][j], allocator);
+                    fixtures_array[j].RemoveMember("name");
                 }
-                block.AddMember("fixture", fixtureArray, allocator);
+                block.AddMember("fixture", fixtures_array, allocator);
                 
-                int imageCount = inputDocument["image"].Size();
-                for (int j = 0; j < imageCount; j++)
+                int image_count = input_document["image"].Size();
+                for (int j = 0; j < image_count; j++)
                 {
-                    if (inputDocument["image"][j]["body"].GetInt() == i)
+                    if (input_document["image"][j]["body"].GetInt() == i)
                     {
                         rapidjson::Value image(rapidjson::kObjectType);
-                        rapidjson::Value res(res_name(inputDocument["image"][j]["file"].GetString()), allocator);
+                        rapidjson::Value res(res_name(input_document["image"][j]["file"].GetString()), allocator);
                         
                         image.AddMember("res", res, allocator);
-                        image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
-                        image.AddMember("scale", inputDocument["image"][j]["scale"].GetFloat(), allocator);
-                        image.AddMember("center", inputDocument["image"][j]["center"], allocator);
+                        image.AddMember("aspect_scale", input_document["image"][j]["aspectScale"].GetFloat(), allocator);
+                        image.AddMember("scale", input_document["image"][j]["scale"].GetFloat(), allocator);
+                        image.AddMember("center", input_document["image"][j]["center"], allocator);
                         //                        image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
                         
-                        if (inputDocument["image"][j].HasMember("angle"))
-                            image.AddMember("angle", inputDocument["image"][j]["angle"].GetFloat(), allocator);
+                        if (input_document["image"][j].HasMember("angle"))
+                            image.AddMember("angle", input_document["image"][j]["angle"].GetFloat(), allocator);
                         else
                             image.AddMember("angle", 0.0, allocator);
                         
                         
-                        imageArray.PushBack(image, allocator);
+                        images_array.PushBack(image, allocator);
                     }
                 }
                 
-                block.AddMember("image", imageArray, allocator);
-                blockArray.PushBack(block, allocator);
+                block.AddMember("image", images_array, allocator);
+                blocks_array.PushBack(block, allocator);
             }
-            else if (bodyName.find(platform) != string::npos)
+            else if (body_name.find(platform) != string::npos)
             {
                 rapidjson::Value position(rapidjson::kObjectType);
                 rapidjson::Value platform(rapidjson::kObjectType);
-                rapidjson::Value fixtureArray(rapidjson::kArrayType);
-                rapidjson::Value imageArray(rapidjson::kArrayType);
+                rapidjson::Value fixtures_array(rapidjson::kArrayType);
+                rapidjson::Value image_array(rapidjson::kArrayType);
                 
                 platform.AddMember("global_index", i, allocator);
                 
-                position.AddMember("x", inputDocument["body"][i]["position"]["x"].GetFloat(), allocator);
-                position.AddMember("y", inputDocument["body"][i]["position"]["y"].GetFloat(), allocator);
+                position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
+                position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
                 platform.AddMember("position", position, allocator);
-                platform.AddMember("type", inputDocument["body"][i]["type"].GetInt(), allocator);
-                platform.AddMember("angle", inputDocument["body"][i]["angle"].GetFloat(), allocator);
+                platform.AddMember("type", input_document["body"][i]["type"].GetInt(), allocator);
+                platform.AddMember("angle", input_document["body"][i]["angle"].GetFloat(), allocator);
                 
-                int fixtureCount = inputDocument["body"][i]["fixture"].Size();
+                int fixtureCount = input_document["body"][i]["fixture"].Size();
                 for (int j = 0; j < fixtureCount; j++)
                 {
-                    fixtureArray.PushBack(inputDocument["body"][i]["fixture"][j], allocator);
-                    fixtureArray[j].RemoveMember("name");
+                    fixtures_array.PushBack(input_document["body"][i]["fixture"][j], allocator);
+                    fixtures_array[j].RemoveMember("name");
                 }
-                platform.AddMember("fixture", fixtureArray, allocator);
+                platform.AddMember("fixture", fixtures_array, allocator);
                 
-                int imageCount = inputDocument["image"].Size();
+                int imageCount = input_document["image"].Size();
                 for (int j = 0; j < imageCount; j++)
                 {
-                    if (inputDocument["image"][j]["body"].GetInt() == i)
+                    if (input_document["image"][j]["body"].GetInt() == i)
                     {
                         rapidjson::Value image(rapidjson::kObjectType);
-                        rapidjson::Value res(res_name(inputDocument["image"][j]["file"].GetString()), allocator);
+                        rapidjson::Value res(res_name(input_document["image"][j]["file"].GetString()), allocator);
                         
                         image.AddMember("res", res, allocator);
-                        image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
-                        image.AddMember("scale", inputDocument["image"][j]["scale"].GetFloat(), allocator);
-                        image.AddMember("center", inputDocument["image"][j]["center"], allocator);
+                        image.AddMember("aspect_scale", input_document["image"][j]["aspectScale"].GetFloat(), allocator);
+                        image.AddMember("scale", input_document["image"][j]["scale"].GetFloat(), allocator);
+                        image.AddMember("center", input_document["image"][j]["center"], allocator);
 //                        image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);                        
 
-                        if (inputDocument["image"][j].HasMember("angle"))
-                            image.AddMember("angle", inputDocument["image"][j]["angle"].GetFloat(), allocator);
+                        if (input_document["image"][j].HasMember("angle"))
+                            image.AddMember("angle", input_document["image"][j]["angle"].GetFloat(), allocator);
                         else
                             image.AddMember("angle", 0.0, allocator);
 
                         
-                        imageArray.PushBack(image, allocator);
+                        image_array.PushBack(image, allocator);
                     }
                 }
                 
-                platform.AddMember("image", imageArray, allocator);
-                platformArray.PushBack(platform, allocator);
+                platform.AddMember("image", image_array, allocator);
+                platforms_array.PushBack(platform, allocator);
             }
-            else if (bodyName.find(star) != string::npos)
+            else if (body_name.find(star) != string::npos)
             {
                 rapidjson::Value position(rapidjson::kObjectType);
                 rapidjson::Value star(rapidjson::kObjectType);
-                rapidjson::Value fixtureArray(rapidjson::kArrayType);
-                rapidjson::Value imageArray(rapidjson::kArrayType);
+                rapidjson::Value fixtures_array(rapidjson::kArrayType);
+                rapidjson::Value images_rray(rapidjson::kArrayType);
                 
                 star.AddMember("global_index", i, allocator);
                 
-                position.AddMember("x", inputDocument["body"][i]["position"]["x"].GetFloat(), allocator);
-                position.AddMember("y", inputDocument["body"][i]["position"]["y"].GetFloat(), allocator);
+                position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
+                position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
                 star.AddMember("position", position, allocator);
-                star.AddMember("type", inputDocument["body"][i]["type"].GetInt(), allocator);
-                star.AddMember("angle", inputDocument["body"][i]["angle"].GetFloat(), allocator);
+                star.AddMember("type", input_document["body"][i]["type"].GetInt(), allocator);
+                star.AddMember("angle", input_document["body"][i]["angle"].GetFloat(), allocator);
                 
-                int fixtureCount = inputDocument["body"][i]["fixture"].Size();
-                for (int j = 0; j < fixtureCount; j++)
+                int fixtures_count = input_document["body"][i]["fixture"].Size();
+                for (int j = 0; j < fixtures_count; j++)
                 {
-                    fixtureArray.PushBack(inputDocument["body"][i]["fixture"][j], allocator);
-                    fixtureArray[j].RemoveMember("name");
+                    fixtures_array.PushBack(input_document["body"][i]["fixture"][j], allocator);
+                    fixtures_array[j].RemoveMember("name");
                 }
-                star.AddMember("fixture", fixtureArray, allocator);
+                star.AddMember("fixture", fixtures_array, allocator);
                 
-                int imageCount = inputDocument["image"].Size();
+                int imageCount = input_document["image"].Size();
                 for (int j = 0; j < imageCount; j++)
                 {
-                    if (inputDocument["image"][j]["body"].GetInt() == i)
+                    if (input_document["image"][j]["body"].GetInt() == i)
                     {
                         rapidjson::Value image(rapidjson::kObjectType);
-                        rapidjson::Value res(res_name(inputDocument["image"][j]["file"].GetString()), allocator);
+                        rapidjson::Value res(res_name(input_document["image"][j]["file"].GetString()), allocator);
                         
                         image.AddMember("res", res, allocator);
-                        image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
-                        image.AddMember("scale", inputDocument["image"][j]["scale"].GetFloat(), allocator);
-                        image.AddMember("center", inputDocument["image"][j]["center"], allocator);
+                        image.AddMember("aspect_scale", input_document["image"][j]["aspectScale"].GetFloat(), allocator);
+                        image.AddMember("scale", input_document["image"][j]["scale"].GetFloat(), allocator);
+                        image.AddMember("center", input_document["image"][j]["center"], allocator);
                         //                        image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
                         
-                        if (inputDocument["image"][j].HasMember("angle"))
-                            image.AddMember("angle", inputDocument["image"][j]["angle"].GetFloat(), allocator);
+                        if (input_document["image"][j].HasMember("angle"))
+                            image.AddMember("angle", input_document["image"][j]["angle"].GetFloat(), allocator);
                         else
                             image.AddMember("angle", 0.0, allocator);
                         
                         
-                        imageArray.PushBack(image, allocator);
+                        images_rray.PushBack(image, allocator);
                     }
                 }
                 
-                star.AddMember("image", imageArray, allocator);
-                starArray.PushBack(star, allocator);
+                star.AddMember("image", images_rray, allocator);
+                stars_array.PushBack(star, allocator);
             }
         }
         // FIRST PASS END
         
         
         // SECOND PASS
-        for (int i = 0; i < bodyCount; i++)
+        for (int i = 0; i < body_count; i++)
         {
-            string bodyName = inputDocument["body"][i]["name"].GetString();
+            string body_name = input_document["body"][i]["name"].GetString();
             
-            if (bodyName.find(structure) != string::npos)
+            if (body_name.find(structure) != string::npos)
             {
-                if (bodyName.find(ball) != string::npos)
+                if (body_name.find(jammer) != string::npos)
                 {
-                    // its a ball body
-                    rapidjson::Value ballBody(rapidjson::kObjectType);
-                    rapidjson::Value fixtureArray(rapidjson::kArrayType);
-                    rapidjson::Value imageArray(rapidjson::kArrayType);
+                    // its a jammer body
+                    rapidjson::Value jammer_body(rapidjson::kObjectType);
+                    rapidjson::Value fixtures_array(rapidjson::kArrayType);
+                    rapidjson::Value images_array(rapidjson::kArrayType);
                     
-                    ballBody.AddMember("global_index", i, allocator);
+                    jammer_body.AddMember("global_index", i, allocator);
                     
                     rapidjson::Value position(rapidjson::kObjectType);
-                    position.AddMember("x", inputDocument["body"][i]["position"]["x"].GetFloat(), allocator);
-                    position.AddMember("y", inputDocument["body"][i]["position"]["y"].GetFloat(), allocator);
-                    ballBody.AddMember("position", position, allocator);
-                    ballBody.AddMember("type", inputDocument["body"][i]["type"].GetInt(), allocator);
-                    ballBody.AddMember("angle", inputDocument["body"][i]["angle"].GetFloat(), allocator);
+                    position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
+                    position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
+                    jammer_body.AddMember("position", position, allocator);
+                    jammer_body.AddMember("type", input_document["body"][i]["type"].GetInt(), allocator);
+                    jammer_body.AddMember("angle", input_document["body"][i]["angle"].GetFloat(), allocator);
                     
-                    int fixtureCount = inputDocument["body"][i]["fixture"].Size();
-                    for (int j = 0; j < fixtureCount; j++)
+                    int fixtures_count = input_document["body"][i]["fixture"].Size();
+                    for (int j = 0; j < fixtures_count; j++)
                     {
-                        fixtureArray.PushBack(inputDocument["body"][i]["fixture"][j], allocator);
-                        fixtureArray[j].RemoveMember("name");
+                        fixtures_array.PushBack(input_document["body"][i]["fixture"][j], allocator);
+                        fixtures_array[j].RemoveMember("name");
                     }
-                    ballBody.AddMember("fixture", fixtureArray, allocator);
+                    jammer_body.AddMember("fixture", fixtures_array, allocator);
                     
-                    int imageCount = inputDocument["image"].Size();
-                    for (int j = 0; j < imageCount; j++)
+                    int image_count = input_document["image"].Size();
+                    for (int j = 0; j < image_count; j++)
                     {
-                        if (inputDocument["image"][j]["body"].GetInt() == i)
+                        if (input_document["image"][j]["body"].GetInt() == i)
                         {
                             rapidjson::Value image(rapidjson::kObjectType);
-                            rapidjson::Value res(res_name(inputDocument["image"][j]["file"].GetString()), allocator);
+                            rapidjson::Value res(res_name(input_document["image"][j]["file"].GetString()), allocator);
                             
                             image.AddMember("res", res, allocator);
-                            image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
-                            image.AddMember("scale", inputDocument["image"][j]["scale"].GetFloat(), allocator);
-                            image.AddMember("center", inputDocument["image"][j]["center"], allocator);
+                            image.AddMember("aspect_scale", input_document["image"][j]["aspectScale"].GetFloat(), allocator);
+                            image.AddMember("scale", input_document["image"][j]["scale"].GetFloat(), allocator);
+                            image.AddMember("center", input_document["image"][j]["center"], allocator);
                             //                            image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
                             
-                            if (inputDocument["image"][j].HasMember("angle"))
-                                image.AddMember("angle", inputDocument["image"][j]["angle"].GetFloat(), allocator);
+                            if (input_document["image"][j].HasMember("angle"))
+                                image.AddMember("angle", input_document["image"][j]["angle"].GetFloat(), allocator);
                             else
                                 image.AddMember("angle", 0.0, allocator);
                             
                             
-                            imageArray.PushBack(image, allocator);
+                            images_array.PushBack(image, allocator);
                         }
                     }
                     
-                    ballBody.AddMember("image", imageArray, allocator);
+                    jammer_body.AddMember("image", images_array, allocator);
                     
-                    ropeStructureArray[rope_structure_id(bodyName)].AddMember("ball", ballBody, allocator);
+                    rope_structures_array[rope_structure_id(body_name)].AddMember("jammer", jammer_body, allocator);
                 }
             }
         }
@@ -352,93 +352,93 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
         
         
         // THIRD PASS
-        for (int i = 0; i < ropeStructureArray.Size(); i++)
+        for (int i = 0; i < rope_structures_array.Size(); i++)
         {
             rapidjson::Value rope(rapidjson::kArrayType);
             rapidjson::Value hinge(rapidjson::kArrayType);
             
-            ropeStructureArray[i].AddMember("rope", rope, allocator);
-            ropeStructureArray[i].AddMember("hinge", hinge, allocator);
+            rope_structures_array[i].AddMember("rope", rope, allocator);
+            rope_structures_array[i].AddMember("hinge", hinge, allocator);
 
             for (int j = 0; j < 2; j++)
             {
                 rapidjson::Value hinge(rapidjson::kObjectType);
-                ropeStructureArray[i]["hinge"].PushBack(hinge, allocator);
+                rope_structures_array[i]["hinge"].PushBack(hinge, allocator);
             }
         }
         
         // for rope 0
-        for (int i = 0; i < ropeStructureArray.Size(); i++)
+        for (int i = 0; i < rope_structures_array.Size(); i++)
         {
-            rapidjson::Value ropeArray(rapidjson::kArrayType);
+            rapidjson::Value ropes_array(rapidjson::kArrayType);
             rapidjson::Value rope(rapidjson::kObjectType);
             
-            for (int j = 0; j < bodyCount; j++)
+            for (int j = 0; j < body_count; j++)
             {
-                string bodyName = inputDocument["body"][j]["name"].GetString();
+                string body_name = input_document["body"][j]["name"].GetString();
                 
-                if (bodyName.find(structure) != string::npos)
+                if (body_name.find(structure) != string::npos)
                 {
                     
-                    if (bodyName.find(rope_literal) != string::npos)
+                    if (body_name.find(rope_literal) != string::npos)
                     {
                         // find ropestructure index
-                        int ropeStructureIndex = rope_structure_id(bodyName);
+                        int structure_id = rope_structure_id(body_name);
                         
-                        if (ropeStructureIndex == i)
+                        if (structure_id == i)
                         {
                             // for rope index = 0
-                            if (rope_id(bodyName) == 0)
+                            if (rope_id(body_name) == 0)
                             {
-                                rapidjson::Value ropeBody(rapidjson::kObjectType);
-                                rapidjson::Value fixtureArray(rapidjson::kArrayType);
-                                rapidjson::Value imageArray(rapidjson::kArrayType);
+                                rapidjson::Value rope_body(rapidjson::kObjectType);
+                                rapidjson::Value fixtures_array(rapidjson::kArrayType);
+                                rapidjson::Value images_array(rapidjson::kArrayType);
                                 
-                                ropeBody.AddMember("global_index", j, allocator);
-                                ropeBody.AddMember("local_index", rope_body_id(bodyName), allocator);
+                                rope_body.AddMember("global_index", j, allocator);
+                                rope_body.AddMember("local_index", rope_body_id(body_name), allocator);
                                 
                                 rapidjson::Value position(rapidjson::kObjectType);
-                                position.AddMember("x", inputDocument["body"][j]["position"]["x"].GetFloat(), allocator);
-                                position.AddMember("y", inputDocument["body"][j]["position"]["y"].GetFloat(), allocator);
-                                ropeBody.AddMember("position", position, allocator);
+                                position.AddMember("x", input_document["body"][j]["position"]["x"].GetFloat(), allocator);
+                                position.AddMember("y", input_document["body"][j]["position"]["y"].GetFloat(), allocator);
+                                rope_body.AddMember("position", position, allocator);
                                 
-                                ropeBody.AddMember("type", inputDocument["body"][j]["type"].GetInt(), allocator);
-                                ropeBody.AddMember("angle", inputDocument["body"][j]["angle"].GetFloat(), allocator);
+                                rope_body.AddMember("type", input_document["body"][j]["type"].GetInt(), allocator);
+                                rope_body.AddMember("angle", input_document["body"][j]["angle"].GetFloat(), allocator);
                                 
-                                int fixtureCount = inputDocument["body"][j]["fixture"].Size();
-                                for (int k = 0; k < fixtureCount; k++)
+                                int fixture_count = input_document["body"][j]["fixture"].Size();
+                                for (int k = 0; k < fixture_count; k++)
                                 {
-                                    fixtureArray.PushBack(inputDocument["body"][j]["fixture"][k], allocator);
-                                    fixtureArray[k].RemoveMember("name");
+                                    fixtures_array.PushBack(input_document["body"][j]["fixture"][k], allocator);
+                                    fixtures_array[k].RemoveMember("name");
                                 }
-                                ropeBody.AddMember("fixture", fixtureArray, allocator);
+                                rope_body.AddMember("fixture", fixtures_array, allocator);
                                 
-                                for (int k = 0; k < imageCount; k++)
+                                for (int k = 0; k < image_count; k++)
                                 {
-                                    if (inputDocument["image"][k]["body"].GetInt() == j)
+                                    if (input_document["image"][k]["body"].GetInt() == j)
                                     {
                                         rapidjson::Value image(rapidjson::kObjectType);
-                                        rapidjson::Value res(res_name(inputDocument["image"][k]["file"].GetString()), allocator);
+                                        rapidjson::Value res(res_name(input_document["image"][k]["file"].GetString()), allocator);
                                         
                                         image.AddMember("res", res, allocator);
-                                        image.AddMember("aspect_scale", inputDocument["image"][k]["aspectScale"].GetFloat(), allocator);
-                                        image.AddMember("scale", inputDocument["image"][k]["scale"].GetFloat(), allocator);
-                                        image.AddMember("center", inputDocument["image"][k]["center"], allocator);
+                                        image.AddMember("aspect_scale", input_document["image"][k]["aspectScale"].GetFloat(), allocator);
+                                        image.AddMember("scale", input_document["image"][k]["scale"].GetFloat(), allocator);
+                                        image.AddMember("center", input_document["image"][k]["center"], allocator);
                                         //                            image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
                                         
-                                        if (inputDocument["image"][k].HasMember("angle"))
-                                            image.AddMember("angle", inputDocument["image"][k]["angle"].GetFloat(), allocator);
+                                        if (input_document["image"][k].HasMember("angle"))
+                                            image.AddMember("angle", input_document["image"][k]["angle"].GetFloat(), allocator);
                                         else
                                             image.AddMember("angle", 0.0, allocator);
                                         
                                         
-                                        imageArray.PushBack(image, allocator);
+                                        images_array.PushBack(image, allocator);
                                     }
                                 }
                                 
-                                ropeBody.AddMember("image", imageArray, allocator);
+                                rope_body.AddMember("image", images_array, allocator);
                                 
-                                ropeArray.PushBack(ropeBody, allocator);
+                                ropes_array.PushBack(rope_body, allocator);
                                 
                             }
                         }
@@ -446,156 +446,155 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
                 }
             }
             
-            ropeStructureArray[i]["rope"].PushBack(ropeArray, allocator);
+            rope_structures_array[i]["rope"].PushBack(ropes_array, allocator);
         }
         
         // for rope 1
-        for (int i = 0; i < ropeStructureArray.Size(); i++)
+        for (int i = 0; i < rope_structures_array.Size(); i++)
         {
-            rapidjson::Value ropeArray(rapidjson::kArrayType);
+            rapidjson::Value ropes_array(rapidjson::kArrayType);
             rapidjson::Value rope(rapidjson::kObjectType);
             
-            for (int j = 0; j < bodyCount; j++)
+            for (int j = 0; j < body_count; j++)
             {
-                string bodyName = inputDocument["body"][j]["name"].GetString();
+                string body_name = input_document["body"][j]["name"].GetString();
                 
-                if (bodyName.find(structure) != string::npos)
+                if (body_name.find(structure) != string::npos)
                 {
-                    
-                    if (bodyName.find(rope_literal) != string::npos)
+                    if (body_name.find(rope_literal) != string::npos)
                     {
                         // find ropestructure index
-                        int ropeStructureIndex = rope_structure_id(bodyName);
+                        int structure_id = rope_structure_id(body_name);
                         
-                        if (ropeStructureIndex == i)
+                        if (structure_id == i)
                         {
                             // for rope index = 1
-                            if (rope_id(bodyName) == 1)
+                            if (rope_id(body_name) == 1)
                             {
-                                rapidjson::Value ropeBody(rapidjson::kObjectType);
-                                rapidjson::Value fixtureArray(rapidjson::kArrayType);
-                                rapidjson::Value imageArray(rapidjson::kArrayType);
+                                rapidjson::Value rope_body(rapidjson::kObjectType);
+                                rapidjson::Value fixtures_array(rapidjson::kArrayType);
+                                rapidjson::Value images_array(rapidjson::kArrayType);
                                 
-                                ropeBody.AddMember("global_index", j, allocator);
-                                ropeBody.AddMember("local_index", rope_body_id(bodyName), allocator);
+                                rope_body.AddMember("global_index", j, allocator);
+                                rope_body.AddMember("local_index", rope_body_id(body_name), allocator);
                                 
                                 rapidjson::Value position(rapidjson::kObjectType);
-                                position.AddMember("x", inputDocument["body"][j]["position"]["x"].GetFloat(), allocator);
-                                position.AddMember("y", inputDocument["body"][j]["position"]["y"].GetFloat(), allocator);
-                                ropeBody.AddMember("position", position, allocator);
+                                position.AddMember("x", input_document["body"][j]["position"]["x"].GetFloat(), allocator);
+                                position.AddMember("y", input_document["body"][j]["position"]["y"].GetFloat(), allocator);
+                                rope_body.AddMember("position", position, allocator);
                                 
-                                ropeBody.AddMember("type", inputDocument["body"][j]["type"].GetInt(), allocator);
-                                ropeBody.AddMember("angle", inputDocument["body"][j]["angle"].GetFloat(), allocator);
+                                rope_body.AddMember("type", input_document["body"][j]["type"].GetInt(), allocator);
+                                rope_body.AddMember("angle", input_document["body"][j]["angle"].GetFloat(), allocator);
                                 
-                                int fixtureCount = inputDocument["body"][j]["fixture"].Size();
+                                int fixtureCount = input_document["body"][j]["fixture"].Size();
                                 for (int k = 0; k < fixtureCount; k++)
                                 {
-                                    fixtureArray.PushBack(inputDocument["body"][j]["fixture"][k], allocator);
-                                    fixtureArray[k].RemoveMember("name");
+                                    fixtures_array.PushBack(input_document["body"][j]["fixture"][k], allocator);
+                                    fixtures_array[k].RemoveMember("name");
                                 }
-                                ropeBody.AddMember("fixture", fixtureArray, allocator);
+                                rope_body.AddMember("fixture", fixtures_array, allocator);
                                 
-                                for (int k = 0; k < imageCount; k++)
+                                for (int k = 0; k < image_count; k++)
                                 {
-                                    if (inputDocument["image"][k]["body"].GetInt() == j)
+                                    if (input_document["image"][k]["body"].GetInt() == j)
                                     {
                                         rapidjson::Value image(rapidjson::kObjectType);
-                                        rapidjson::Value res(res_name(inputDocument["image"][k]["file"].GetString()), allocator);
+                                        rapidjson::Value res(res_name(input_document["image"][k]["file"].GetString()), allocator);
                                         
                                         image.AddMember("res", res, allocator);
-                                        image.AddMember("aspect_scale", inputDocument["image"][k]["aspectScale"].GetFloat(), allocator);
-                                        image.AddMember("scale", inputDocument["image"][k]["scale"].GetFloat(), allocator);
-                                        image.AddMember("center", inputDocument["image"][k]["center"], allocator);
+                                        image.AddMember("aspect_scale", input_document["image"][k]["aspectScale"].GetFloat(), allocator);
+                                        image.AddMember("scale", input_document["image"][k]["scale"].GetFloat(), allocator);
+                                        image.AddMember("center", input_document["image"][k]["center"], allocator);
                                         //                            image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
                                         
-                                        if (inputDocument["image"][k].HasMember("angle"))
-                                            image.AddMember("angle", inputDocument["image"][k]["angle"].GetFloat(), allocator);
+                                        if (input_document["image"][k].HasMember("angle"))
+                                            image.AddMember("angle", input_document["image"][k]["angle"].GetFloat(), allocator);
                                         else
                                             image.AddMember("angle", 0.0, allocator);
                                         
-                                        imageArray.PushBack(image, allocator);
+                                        images_array.PushBack(image, allocator);
                                     }
                                 }
                                 
-                                ropeBody.AddMember("image", imageArray, allocator);
+                                rope_body.AddMember("image", images_array, allocator);
                                 
-                                ropeArray.PushBack(ropeBody, allocator);
+                                ropes_array.PushBack(rope_body, allocator);
                             }
                         }
                     }
                 }
             }
             
-            ropeStructureArray[i]["rope"].PushBack(ropeArray, allocator);
+            rope_structures_array[i]["rope"].PushBack(ropes_array, allocator);
         }
         
         // for hinge
-        for (int i = 0; i < bodyCount; i++)
+        for (int i = 0; i < body_count; i++)
         {
-            string bodyName = inputDocument["body"][i]["name"].GetString();
+            string body_name = input_document["body"][i]["name"].GetString();
             
-            if (bodyName.find(hinge) != string::npos)
+            if (body_name.find(hinge) != string::npos)
             {
                 // add hinge
-                rapidjson::Value hingeBody(rapidjson::kObjectType);
-                rapidjson::Value fixtureArray(rapidjson::kArrayType);
-                rapidjson::Value imageArray(rapidjson::kArrayType);
+                rapidjson::Value hinge_body(rapidjson::kObjectType);
+                rapidjson::Value fixtures_array(rapidjson::kArrayType);
+                rapidjson::Value image_array(rapidjson::kArrayType);
                 
-                hingeBody.AddMember("global_index", i, allocator);
+                hinge_body.AddMember("global_index", i, allocator);
                 
                 rapidjson::Value position(rapidjson::kObjectType);
-                position.AddMember("x", inputDocument["body"][i]["position"]["x"].GetFloat(), allocator);
-                position.AddMember("y", inputDocument["body"][i]["position"]["y"].GetFloat(), allocator);
-                hingeBody.AddMember("position", position, allocator);
-                hingeBody.AddMember("type", inputDocument["body"][i]["type"].GetInt(), allocator);
-                hingeBody.AddMember("angle", inputDocument["body"][i]["angle"].GetFloat(), allocator);
+                position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
+                position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
+                hinge_body.AddMember("position", position, allocator);
+                hinge_body.AddMember("type", input_document["body"][i]["type"].GetInt(), allocator);
+                hinge_body.AddMember("angle", input_document["body"][i]["angle"].GetFloat(), allocator);
                 
-                int fixtureCount = inputDocument["body"][i]["fixture"].Size();
+                int fixtureCount = input_document["body"][i]["fixture"].Size();
                 for (int j = 0; j < fixtureCount; j++)
                 {
-                    fixtureArray.PushBack(inputDocument["body"][i]["fixture"][j], allocator);
-                    fixtureArray[j].RemoveMember("name");
+                    fixtures_array.PushBack(input_document["body"][i]["fixture"][j], allocator);
+                    fixtures_array[j].RemoveMember("name");
                 }
-                hingeBody.AddMember("fixture", fixtureArray, allocator);
+                hinge_body.AddMember("fixture", fixtures_array, allocator);
                 
-                int imageCount = inputDocument["image"].Size();
+                int imageCount = input_document["image"].Size();
                 for (int j = 0; j < imageCount; j++)
                 {
-                    if (inputDocument["image"][j]["body"].GetInt() == i)
+                    if (input_document["image"][j]["body"].GetInt() == i)
                     {
                         rapidjson::Value image(rapidjson::kObjectType);
-                        rapidjson::Value res(res_name(inputDocument["image"][j]["file"].GetString()), allocator);
+                        rapidjson::Value res(res_name(input_document["image"][j]["file"].GetString()), allocator);
                         
                         image.AddMember("res", res, allocator);
-                        image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
-                        image.AddMember("scale", inputDocument["image"][j]["scale"].GetFloat(), allocator);
-                        image.AddMember("center", inputDocument["image"][j]["center"], allocator);
+                        image.AddMember("aspect_scale", input_document["image"][j]["aspectScale"].GetFloat(), allocator);
+                        image.AddMember("scale", input_document["image"][j]["scale"].GetFloat(), allocator);
+                        image.AddMember("center", input_document["image"][j]["center"], allocator);
                         //                            image.AddMember("corners", inputDocument["image"][j]["corners"], allocator);
                         
-                        if (inputDocument["image"][j].HasMember("angle"))
-                            image.AddMember("angle", inputDocument["image"][j]["angle"].GetFloat(), allocator);
+                        if (input_document["image"][j].HasMember("angle"))
+                            image.AddMember("angle", input_document["image"][j]["angle"].GetFloat(), allocator);
                         else
                             image.AddMember("angle", 0.0, allocator);
                         
-                        imageArray.PushBack(image, allocator);
+                        image_array.PushBack(image, allocator);
                     }
                 }
                 
-                hingeBody.AddMember("image", imageArray, allocator);
+                hinge_body.AddMember("image", image_array, allocator);
                 
-                ropeStructureArray[rope_structure_id(bodyName)]["hinge"][hinge_id(bodyName)] = hingeBody;
+                rope_structures_array[rope_structure_id(body_name)]["hinge"][hinge_id(body_name)] = hinge_body;
             }
         }
         // THIRD PASS END
         
         // FOURTH PASS
-        for (int i = 0; i < ropeStructureArray.Size(); i++)
+        for (int i = 0; i < rope_structures_array.Size(); i++)
         {
-            for (int j = 0; j < ropeStructureArray[i]["rope"].Size(); j++)
+            for (int j = 0; j < rope_structures_array[i]["rope"].Size(); j++)
             {
-                for (int k = 0; k < ropeStructureArray[i]["rope"][j].Size(); )
+                for (int k = 0; k < rope_structures_array[i]["rope"][j].Size(); )
                 {
-                    int swapperIndex = ropeStructureArray[i]["rope"][j][k]["local_index"].GetInt();
+                    int swapperIndex = rope_structures_array[i]["rope"][j][k]["local_index"].GetInt();
                     
                     if (k == swapperIndex)
                     {
@@ -605,9 +604,9 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
                     {
                         rapidjson::Value swapper(rapidjson::kObjectType);
                         
-                        swapper = ropeStructureArray[i]["rope"][j][k];
-                        ropeStructureArray[i]["rope"][j][k] = ropeStructureArray[i]["rope"][j][swapperIndex];
-                        ropeStructureArray[i]["rope"][j][swapperIndex] = swapper;
+                        swapper = rope_structures_array[i]["rope"][j][k];
+                        rope_structures_array[i]["rope"][j][k] = rope_structures_array[i]["rope"][j][swapperIndex];
+                        rope_structures_array[i]["rope"][j][swapperIndex] = swapper;
                     }
                 }
                 
@@ -616,56 +615,56 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
         // FOURTH PASS END
         
         // FIFTH PASS
-        for (int i = 0; i < inputDocument["joint"].Size(); i++)
+        for (int i = 0; i < input_document["joint"].Size(); i++)
         {
-            rapidjson::Value nameA(inputDocument["body"][inputDocument["joint"][i]["bodyA"].GetInt()]["name"].GetString(), allocator);
-            rapidjson::Value nameB(inputDocument["body"][inputDocument["joint"][i]["bodyB"].GetInt()]["name"].GetString(), allocator);
+            rapidjson::Value nameA(input_document["body"][input_document["joint"][i]["bodyA"].GetInt()]["name"].GetString(), allocator);
+            rapidjson::Value nameB(input_document["body"][input_document["joint"][i]["bodyB"].GetInt()]["name"].GetString(), allocator);
             
-            inputDocument["joint"][i].AddMember("nameA", nameA, allocator);
-            inputDocument["joint"][i].AddMember("nameB", nameB, allocator);
+            input_document["joint"][i].AddMember("nameA", nameA, allocator);
+            input_document["joint"][i].AddMember("nameB", nameB, allocator);
         }
         // FIFTH PASS END
         
         
         // SIXTH PASS
-        for (int i = 0; i < ropeStructureArray.Size(); i++)
+        for (int i = 0; i < rope_structures_array.Size(); i++)
         {
-            for (int j = 0; j < ropeStructureArray[i]["rope"].Size(); j++)
+            for (int j = 0; j < rope_structures_array[i]["rope"].Size(); j++)
             {
-                if (ropeStructureArray[i]["rope"][j].Size() == 0)
+                if (rope_structures_array[i]["rope"][j].Size() == 0)
                 {
-                    ropeStructureArray[i]["rope"].PopBack();
+                    rope_structures_array[i]["rope"].PopBack();
                 }
             }
             
-            for (int j = 0; j < ropeStructureArray[i]["hinge"].Size(); j++)
+            for (int j = 0; j < rope_structures_array[i]["hinge"].Size(); j++)
             {
-                if (ropeStructureArray[i]["hinge"][j].MemberCount() == 0)
+                if (rope_structures_array[i]["hinge"][j].MemberCount() == 0)
                 {
-                    ropeStructureArray[i]["hinge"].PopBack();
+                    rope_structures_array[i]["hinge"].PopBack();
                 }
             }
         }
         // SIXTH PASS END
         
         
-        rapidjson::Value fixtureArray(rapidjson::kArrayType);
+//        rapidjson::Value fixtures_array(rapidjson::kArrayType);
         
-        outputDocument.AddMember("bg_array", bgArray, allocator);
-        outputDocument.AddMember("rope_structure", ropeStructureArray, allocator);
-        outputDocument.AddMember("platform", platformArray, allocator);
-        outputDocument.AddMember("block", blockArray, allocator);
-        outputDocument.AddMember("star", starArray, allocator);
-        outputDocument.AddMember("joint", inputDocument["joint"].GetArray(), allocator);
+//        outputDocument.AddMember("bg_array", bgArray, allocator);
+        output_document.AddMember("rope_structure", rope_structures_array, allocator);
+        output_document.AddMember("platform", platforms_array, allocator);
+        output_document.AddMember("block", blocks_array, allocator);
+        output_document.AddMember("star", stars_array, allocator);
+        output_document.AddMember("joint", input_document["joint"].GetArray(), allocator);
         
-        worldSize.AddMember("max_x", maxX, allocator);
-        worldSize.AddMember("max_y", maxY, allocator);
-        outputDocument.AddMember("world_size", worldSize, allocator);
+        world_size.AddMember("max_x", maxX, allocator);
+        world_size.AddMember("max_y", maxY, allocator);
+        output_document.AddMember("world_size", world_size, allocator);
         
         // writing to target file
         rapidjson::StringBuffer strbuf;
         rapidjson::Writer<rapidjson::StringBuffer> writer(strbuf);
-        outputDocument.Accept(writer);
+        output_document.Accept(writer);
         
         ofstream outputFile;
         outputFile.open(tar_path);
@@ -698,124 +697,126 @@ int RubeHelper::background_id(std::string imageName)
 
 int RubeHelper::rope_structure_id(std::string bodyName)
 {
-    char ropeStructureIndex[3];
-    int chItr;
-    int chItr2;
+    char rope_structure_id[3];
+    int itr;
+    int itr_2;
     
-    chItr = ((int)structure.length()) + 1;
-    chItr2 = 0;
-    for (; bodyName[chItr] != '_'; chItr++)
+    itr = ((int)structure.length()) + 1;
+    itr_2 = 0;
+    
+    for (; bodyName[itr] != '_'; itr++)
     {
-        ropeStructureIndex[chItr2++] = bodyName[chItr];
+        rope_structure_id[itr_2++] = bodyName[itr];
     }
     
-    return atoi(ropeStructureIndex);
+    return atoi(rope_structure_id);
 }
 
-int RubeHelper::rope_id(std::string bodyName)
+int RubeHelper::rope_id(std::string body_name)
 {
-    char ropeStructureIndex[3];
-    int chItr;
-    int chItr2;
+    char rope_structure_id[3];
+    int itr;
+    int itr_2;
     
-    chItr = ((int)structure.length()) + 1;
-    chItr2 = 0;
-    for (; bodyName[chItr] != '_'; chItr++)
+    itr = ((int)structure.length()) + 1;
+    itr_2 = 0;
+    
+    for (; body_name[itr] != '_'; itr++)
     {
-        ropeStructureIndex[chItr2++] = bodyName[chItr];
+        rope_structure_id[itr_2++] = body_name[itr];
     }
     
-    char ropeIndex[3];
-    chItr += ((int)rope_literal.length()) + 2;
-    chItr2 = 0;
+    char rope_id[3];
+    itr += ((int)rope_literal.length()) + 2;
+    itr_2 = 0;
     
-    for (; bodyName[chItr] != '_'; chItr++)
+    for (; body_name[itr] != '_'; itr++)
     {
-        ropeIndex[chItr2++] = bodyName[chItr];
+        rope_id[itr_2++] = body_name[itr];
     }
     
-    return atoi(ropeIndex);
+    return atoi(rope_id);
 }
 
-int RubeHelper::rope_body_id(std::string bodyName)
+int RubeHelper::rope_body_id(std::string body_name)
 {
     // find ropestructure index
-    char ropeStructureIndex[3];
-    int chItr;
-    int chItr2;
+    char rope_structure_id[3];
+    int itr;
+    int itr_2;
     
-    chItr = ((int)structure.length()) + 1;
-    chItr2 = 0;
-    for (; bodyName[chItr] != '_'; chItr++)
+    itr = ((int)structure.length()) + 1;
+    itr_2 = 0;
+    for (; body_name[itr] != '_'; itr++)
     {
-        ropeStructureIndex[chItr2++] = bodyName[chItr];
+        rope_structure_id[itr_2++] = body_name[itr];
     }
     
     // find rope index
-    char ropeIndex[3];
-    chItr += ((int)rope_literal.length()) + 2;
-    chItr2 = 0;
+    char rope_id[3];
+    itr += ((int)rope_literal.length()) + 2;
+    itr_2 = 0;
     
-    for (; bodyName[chItr] != '_'; chItr++)
+    for (; body_name[itr] != '_'; itr++)
     {
-        ropeIndex[chItr2++] = bodyName[chItr];
+        rope_id[itr_2++] = body_name[itr];
     }
     
     // find rope body index
-    char ropeBodyIndex[3];
-    chItr++;
-    chItr2 = 0;
+    char rope_body_id[3];
+    itr++;
+    itr_2 = 0;
     
-    for (; chItr < (int)bodyName.length(); chItr++)
+    for (; itr < (int)body_name.length(); itr++)
     {
-        ropeBodyIndex[chItr2++] = bodyName[chItr];
+        rope_body_id[itr_2++] = body_name[itr];
     }
     
-    return atoi(ropeBodyIndex);
+    return atoi(rope_body_id);
 }
 
-int RubeHelper::hinge_id(std::string bodyName)
+int RubeHelper::hinge_id(std::string body_name)
 {
     // find ropestructure index
-    char ropeStructureIndex[3];
-    int chItr;
-    int chItr2;
+    char rope_structure_id[3];
+    int itr;
+    int itr_2;
     
-    chItr = (int)structure.length()+1;
-    chItr2 = 0;
-    for (; bodyName[chItr] != '_'; chItr++)
+    itr = (int)structure.length()+1;
+    itr_2 = 0;
+    for (; body_name[itr] != '_'; itr++)
     {
-        ropeStructureIndex[chItr2++] = bodyName[chItr];
+        rope_structure_id[itr_2++] = body_name[itr];
     }
     
     // find hinge index
-    char hingeIndex[3];
+    char hinge_id[3];
     
-    chItr += hinge.length()+2;
-    chItr2 = 0;
+    itr += hinge.length()+2;
+    itr_2 = 0;
     
-    for (; chItr < (int)bodyName.length(); chItr++)
+    for (; itr < (int)body_name.length(); itr++)
     {
-        hingeIndex[chItr2++] = bodyName[chItr];
+        hinge_id[itr_2++] = body_name[itr];
     }
     
-    return atoi(hingeIndex);
+    return atoi(hinge_id);
 }
 
-char * RubeHelper::res_name(std::string resPath)
+char * RubeHelper::res_name(std::string res_path)
 {
-    char *resName;
-    int i = ((int)resPath.length())-1;
+    char * res_name;
+    int i = ((int)res_path.length())-1;
     int j = 0;
     
-    for (; resPath[i] != '/'; i--);
+    for (; res_path[i] != '/'; i--);
     
-    resName = new char[((int)resPath.length())-i];
+    res_name = new char[((int)res_path.length())-i];
     
-    for (i++; i < ((int)resPath.length()); i++)
-        resName[j++] = resPath[i];
+    for (i++; i < ((int)res_path.length()); i++)
+        res_name[j++] = res_path[i];
     
-    resName[j] = '\0';
+    res_name[j] = '\0';
     
-    return resName;
+    return res_name;
 }
