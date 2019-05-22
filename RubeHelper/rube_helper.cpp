@@ -1,32 +1,18 @@
-//
-//  json_converter.cpp
-//  RawJsonConverter
-//
-//  Created by Zaim Abbasi on 28/08/2017.
-//  Copyright © 2017 Zaim Abbasi. All rights reserved.
-//
+#include "rube_helper.h"
 
-#include "json_converter.h"
-#include <fstream>
+string structure = "structure";
+string rope_literal = "rope";
+string hinge = "hinge";
+string ball = "ball";
+string platform = "platform";
+string block = "block";
+string star = "star";
+string background = "background";
 
-using namespace std;
-
-string STRUCTURE_STRING_LITERAL = "structure";
-string ROPE_STRING_LITERAL = "rope";
-string HINGE_STRING_LITERAL = "hinge";
-string BALL_STRING_LITERAL = "ball";
-string PLATFORM_STRING_LITERAL = "platform";
-string BLOCK_STRING_LITERAL = "block";
-string STAR_STRING_LITERAL = "star";
-string BG_STRING_LITERAL = "bg";
-
-bool JsonConverter::buildLevelFile(std::string resource_path,
-                                   std::string target_path,
-                                   int world_index,
-                                   int level_index)
+bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int world_id, int level_id)
 {
     ifstream inputFile;
-    inputFile.open(resource_path);
+    inputFile.open(res_path);
     
     if (inputFile.is_open())
     {
@@ -59,8 +45,8 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
         rapidjson::Document::AllocatorType& allocator = outputDocument.GetAllocator();
         
         // insert top level members
-        outputDocument.AddMember("world_index", world_index, allocator);
-        outputDocument.AddMember("level_index", level_index, allocator);
+        outputDocument.AddMember("world_index", world_id, allocator);
+        outputDocument.AddMember("level_index", level_id, allocator);
         
         rapidjson::Value ropeStructureArray(rapidjson::kArrayType);
         rapidjson::Value blockArray(rapidjson::kArrayType);
@@ -82,7 +68,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
         {
             string imageName = inputDocument["image"][i]["name"].GetString();
             
-            if (imageName.find(BG_STRING_LITERAL) != string::npos)
+            if (imageName.find(background) != string::npos)
             {
                 ++bgCount;
             }
@@ -99,9 +85,9 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
             {
                 imageName = inputDocument["image"][j]["name"].GetString();
 
-                if (imageName.find(BG_STRING_LITERAL) != string::npos)
+                if (imageName.find(background) != string::npos)
                 {
-                    if (getBGIndex(imageName) == i)                                // here
+                    if (background_id(imageName) == i)                                // here
                     {
                         found = true;
                         break;
@@ -113,7 +99,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
             {
                 rapidjson::Value bgLayer(rapidjson::kObjectType);
                 
-                rapidjson::Value res(getResName(inputDocument["image"][j]["file"].GetString()), allocator);
+                rapidjson::Value res(res_name(inputDocument["image"][j]["file"].GetString()), allocator);
                 rapidjson::Value position(rapidjson::kObjectType);
                 bgLayer.AddMember("res", res, allocator);
                 position.AddMember("x", inputDocument["image"][j]["center"]["x"].GetFloat(), allocator);
@@ -139,16 +125,16 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
             }
             
             // check if its rope_structure, platform, block or star
-            if (bodyName.find(STRUCTURE_STRING_LITERAL) != string::npos)
+            if (bodyName.find(structure) != string::npos)
             {
-                if (bodyName.find(BALL_STRING_LITERAL) != string::npos)
+                if (bodyName.find(ball) != string::npos)
                 {
                     // its a ball body
                     rapidjson::Value ball(rapidjson::kObjectType);
                     ropeStructureArray.PushBack(ball, allocator);
                 }
             }
-            else if (bodyName.find(BLOCK_STRING_LITERAL) != string::npos)
+            else if (bodyName.find(block) != string::npos)
             {
                 rapidjson::Value block(rapidjson::kObjectType);
                 rapidjson::Value position(rapidjson::kObjectType);
@@ -176,7 +162,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                     if (inputDocument["image"][j]["body"].GetInt() == i)
                     {
                         rapidjson::Value image(rapidjson::kObjectType);
-                        rapidjson::Value res(getResName(inputDocument["image"][j]["file"].GetString()), allocator);
+                        rapidjson::Value res(res_name(inputDocument["image"][j]["file"].GetString()), allocator);
                         
                         image.AddMember("res", res, allocator);
                         image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
@@ -197,7 +183,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                 block.AddMember("image", imageArray, allocator);
                 blockArray.PushBack(block, allocator);
             }
-            else if (bodyName.find(PLATFORM_STRING_LITERAL) != string::npos)
+            else if (bodyName.find(platform) != string::npos)
             {
                 rapidjson::Value position(rapidjson::kObjectType);
                 rapidjson::Value platform(rapidjson::kObjectType);
@@ -226,7 +212,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                     if (inputDocument["image"][j]["body"].GetInt() == i)
                     {
                         rapidjson::Value image(rapidjson::kObjectType);
-                        rapidjson::Value res(getResName(inputDocument["image"][j]["file"].GetString()), allocator);
+                        rapidjson::Value res(res_name(inputDocument["image"][j]["file"].GetString()), allocator);
                         
                         image.AddMember("res", res, allocator);
                         image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
@@ -247,7 +233,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                 platform.AddMember("image", imageArray, allocator);
                 platformArray.PushBack(platform, allocator);
             }
-            else if (bodyName.find(STAR_STRING_LITERAL) != string::npos)
+            else if (bodyName.find(star) != string::npos)
             {
                 rapidjson::Value position(rapidjson::kObjectType);
                 rapidjson::Value star(rapidjson::kObjectType);
@@ -276,7 +262,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                     if (inputDocument["image"][j]["body"].GetInt() == i)
                     {
                         rapidjson::Value image(rapidjson::kObjectType);
-                        rapidjson::Value res(getResName(inputDocument["image"][j]["file"].GetString()), allocator);
+                        rapidjson::Value res(res_name(inputDocument["image"][j]["file"].GetString()), allocator);
                         
                         image.AddMember("res", res, allocator);
                         image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
@@ -306,9 +292,9 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
         {
             string bodyName = inputDocument["body"][i]["name"].GetString();
             
-            if (bodyName.find(STRUCTURE_STRING_LITERAL) != string::npos)
+            if (bodyName.find(structure) != string::npos)
             {
-                if (bodyName.find(BALL_STRING_LITERAL) != string::npos)
+                if (bodyName.find(ball) != string::npos)
                 {
                     // its a ball body
                     rapidjson::Value ballBody(rapidjson::kObjectType);
@@ -338,7 +324,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                         if (inputDocument["image"][j]["body"].GetInt() == i)
                         {
                             rapidjson::Value image(rapidjson::kObjectType);
-                            rapidjson::Value res(getResName(inputDocument["image"][j]["file"].GetString()), allocator);
+                            rapidjson::Value res(res_name(inputDocument["image"][j]["file"].GetString()), allocator);
                             
                             image.AddMember("res", res, allocator);
                             image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
@@ -358,7 +344,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                     
                     ballBody.AddMember("image", imageArray, allocator);
                     
-                    ropeStructureArray[getRopeStructureIndex(bodyName)].AddMember("ball", ballBody, allocator);
+                    ropeStructureArray[rope_structure_id(bodyName)].AddMember("ball", ballBody, allocator);
                 }
             }
         }
@@ -391,25 +377,25 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
             {
                 string bodyName = inputDocument["body"][j]["name"].GetString();
                 
-                if (bodyName.find(STRUCTURE_STRING_LITERAL) != string::npos)
+                if (bodyName.find(structure) != string::npos)
                 {
                     
-                    if (bodyName.find(ROPE_STRING_LITERAL) != string::npos)
+                    if (bodyName.find(rope_literal) != string::npos)
                     {
                         // find ropestructure index
-                        int ropeStructureIndex = getRopeStructureIndex(bodyName);
+                        int ropeStructureIndex = rope_structure_id(bodyName);
                         
                         if (ropeStructureIndex == i)
                         {
                             // for rope index = 0
-                            if (getRopeIndex(bodyName) == 0)
+                            if (rope_id(bodyName) == 0)
                             {
                                 rapidjson::Value ropeBody(rapidjson::kObjectType);
                                 rapidjson::Value fixtureArray(rapidjson::kArrayType);
                                 rapidjson::Value imageArray(rapidjson::kArrayType);
                                 
                                 ropeBody.AddMember("global_index", j, allocator);
-                                ropeBody.AddMember("local_index", getRopeBodyIndex(bodyName), allocator);
+                                ropeBody.AddMember("local_index", rope_body_id(bodyName), allocator);
                                 
                                 rapidjson::Value position(rapidjson::kObjectType);
                                 position.AddMember("x", inputDocument["body"][j]["position"]["x"].GetFloat(), allocator);
@@ -432,7 +418,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                                     if (inputDocument["image"][k]["body"].GetInt() == j)
                                     {
                                         rapidjson::Value image(rapidjson::kObjectType);
-                                        rapidjson::Value res(getResName(inputDocument["image"][k]["file"].GetString()), allocator);
+                                        rapidjson::Value res(res_name(inputDocument["image"][k]["file"].GetString()), allocator);
                                         
                                         image.AddMember("res", res, allocator);
                                         image.AddMember("aspect_scale", inputDocument["image"][k]["aspectScale"].GetFloat(), allocator);
@@ -473,25 +459,25 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
             {
                 string bodyName = inputDocument["body"][j]["name"].GetString();
                 
-                if (bodyName.find(STRUCTURE_STRING_LITERAL) != string::npos)
+                if (bodyName.find(structure) != string::npos)
                 {
                     
-                    if (bodyName.find(ROPE_STRING_LITERAL) != string::npos)
+                    if (bodyName.find(rope_literal) != string::npos)
                     {
                         // find ropestructure index
-                        int ropeStructureIndex = getRopeStructureIndex(bodyName);
+                        int ropeStructureIndex = rope_structure_id(bodyName);
                         
                         if (ropeStructureIndex == i)
                         {
                             // for rope index = 1
-                            if (getRopeIndex(bodyName) == 1)
+                            if (rope_id(bodyName) == 1)
                             {
                                 rapidjson::Value ropeBody(rapidjson::kObjectType);
                                 rapidjson::Value fixtureArray(rapidjson::kArrayType);
                                 rapidjson::Value imageArray(rapidjson::kArrayType);
                                 
                                 ropeBody.AddMember("global_index", j, allocator);
-                                ropeBody.AddMember("local_index", getRopeBodyIndex(bodyName), allocator);
+                                ropeBody.AddMember("local_index", rope_body_id(bodyName), allocator);
                                 
                                 rapidjson::Value position(rapidjson::kObjectType);
                                 position.AddMember("x", inputDocument["body"][j]["position"]["x"].GetFloat(), allocator);
@@ -514,7 +500,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                                     if (inputDocument["image"][k]["body"].GetInt() == j)
                                     {
                                         rapidjson::Value image(rapidjson::kObjectType);
-                                        rapidjson::Value res(getResName(inputDocument["image"][k]["file"].GetString()), allocator);
+                                        rapidjson::Value res(res_name(inputDocument["image"][k]["file"].GetString()), allocator);
                                         
                                         image.AddMember("res", res, allocator);
                                         image.AddMember("aspect_scale", inputDocument["image"][k]["aspectScale"].GetFloat(), allocator);
@@ -548,7 +534,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
         {
             string bodyName = inputDocument["body"][i]["name"].GetString();
             
-            if (bodyName.find(HINGE_STRING_LITERAL) != string::npos)
+            if (bodyName.find(hinge) != string::npos)
             {
                 // add hinge
                 rapidjson::Value hingeBody(rapidjson::kObjectType);
@@ -578,7 +564,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                     if (inputDocument["image"][j]["body"].GetInt() == i)
                     {
                         rapidjson::Value image(rapidjson::kObjectType);
-                        rapidjson::Value res(getResName(inputDocument["image"][j]["file"].GetString()), allocator);
+                        rapidjson::Value res(res_name(inputDocument["image"][j]["file"].GetString()), allocator);
                         
                         image.AddMember("res", res, allocator);
                         image.AddMember("aspect_scale", inputDocument["image"][j]["aspectScale"].GetFloat(), allocator);
@@ -597,7 +583,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
                 
                 hingeBody.AddMember("image", imageArray, allocator);
                 
-                ropeStructureArray[getRopeStructureIndex(bodyName)]["hinge"][getHingeIndex(bodyName)] = hingeBody;
+                ropeStructureArray[rope_structure_id(bodyName)]["hinge"][hinge_id(bodyName)] = hingeBody;
             }
         }
         // THIRD PASS END
@@ -682,7 +668,7 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
         outputDocument.Accept(writer);
         
         ofstream outputFile;
-        outputFile.open(target_path);
+        outputFile.open(tar_path);
         
         outputFile << strbuf.GetString();
         
@@ -694,13 +680,13 @@ bool JsonConverter::buildLevelFile(std::string resource_path,
     return false;
 }
 
-int JsonConverter::getBGIndex(std::string imageName)
+int RubeHelper::background_id(std::string imageName)
 {
     char bgIndex[3];
     int chItr;
     int chItr2;
     
-    chItr = ((int)BG_STRING_LITERAL.length()) + 1;
+    chItr = ((int)background.length()) + 1;
     chItr2 = 0;
     for (; imageName[chItr] != '_'; chItr++)
     {
@@ -710,13 +696,13 @@ int JsonConverter::getBGIndex(std::string imageName)
     return atoi(bgIndex);
 }
 
-int JsonConverter::getRopeStructureIndex(std::string bodyName)
+int RubeHelper::rope_structure_id(std::string bodyName)
 {
     char ropeStructureIndex[3];
     int chItr;
     int chItr2;
     
-    chItr = ((int)STRUCTURE_STRING_LITERAL.length()) + 1;
+    chItr = ((int)structure.length()) + 1;
     chItr2 = 0;
     for (; bodyName[chItr] != '_'; chItr++)
     {
@@ -726,13 +712,13 @@ int JsonConverter::getRopeStructureIndex(std::string bodyName)
     return atoi(ropeStructureIndex);
 }
 
-int JsonConverter::getRopeIndex(std::string bodyName)
+int RubeHelper::rope_id(std::string bodyName)
 {
     char ropeStructureIndex[3];
     int chItr;
     int chItr2;
     
-    chItr = ((int)STRUCTURE_STRING_LITERAL.length()) + 1;
+    chItr = ((int)structure.length()) + 1;
     chItr2 = 0;
     for (; bodyName[chItr] != '_'; chItr++)
     {
@@ -740,7 +726,7 @@ int JsonConverter::getRopeIndex(std::string bodyName)
     }
     
     char ropeIndex[3];
-    chItr += ((int)ROPE_STRING_LITERAL.length()) + 2;
+    chItr += ((int)rope_literal.length()) + 2;
     chItr2 = 0;
     
     for (; bodyName[chItr] != '_'; chItr++)
@@ -751,14 +737,14 @@ int JsonConverter::getRopeIndex(std::string bodyName)
     return atoi(ropeIndex);
 }
 
-int JsonConverter::getRopeBodyIndex(std::string bodyName)
+int RubeHelper::rope_body_id(std::string bodyName)
 {
     // find ropestructure index
     char ropeStructureIndex[3];
     int chItr;
     int chItr2;
     
-    chItr = ((int)STRUCTURE_STRING_LITERAL.length()) + 1;
+    chItr = ((int)structure.length()) + 1;
     chItr2 = 0;
     for (; bodyName[chItr] != '_'; chItr++)
     {
@@ -767,7 +753,7 @@ int JsonConverter::getRopeBodyIndex(std::string bodyName)
     
     // find rope index
     char ropeIndex[3];
-    chItr += ((int)ROPE_STRING_LITERAL.length()) + 2;
+    chItr += ((int)rope_literal.length()) + 2;
     chItr2 = 0;
     
     for (; bodyName[chItr] != '_'; chItr++)
@@ -788,14 +774,14 @@ int JsonConverter::getRopeBodyIndex(std::string bodyName)
     return atoi(ropeBodyIndex);
 }
 
-int JsonConverter::getHingeIndex(std::string bodyName)
+int RubeHelper::hinge_id(std::string bodyName)
 {
     // find ropestructure index
     char ropeStructureIndex[3];
     int chItr;
     int chItr2;
     
-    chItr = (int)STRUCTURE_STRING_LITERAL.length()+1;
+    chItr = (int)structure.length()+1;
     chItr2 = 0;
     for (; bodyName[chItr] != '_'; chItr++)
     {
@@ -805,7 +791,7 @@ int JsonConverter::getHingeIndex(std::string bodyName)
     // find hinge index
     char hingeIndex[3];
     
-    chItr += HINGE_STRING_LITERAL.length()+2;
+    chItr += hinge.length()+2;
     chItr2 = 0;
     
     for (; chItr < (int)bodyName.length(); chItr++)
@@ -816,7 +802,7 @@ int JsonConverter::getHingeIndex(std::string bodyName)
     return atoi(hingeIndex);
 }
 
-char * JsonConverter::getResName(std::string resPath)
+char * RubeHelper::res_name(std::string resPath)
 {
     char *resName;
     int i = ((int)resPath.length())-1;

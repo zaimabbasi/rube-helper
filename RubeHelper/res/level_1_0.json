@@ -1,0 +1,2834 @@
+
+{
+	"allowSleep" : true,
+	"autoClearForces" : true,
+	"body" : 
+	[
+		
+		{
+			"angle" : -1.132890462875366,
+			"angularVelocity" : -0.4089849889278412,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : -0.2186840921640396,
+				"y" : 0.3437763452529907
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_0_rope_1_3",
+			"position" : 
+			{
+				"x" : 4.700128555297852,
+				"y" : 7.267032623291016
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 1.097181797027588,
+			"angularVelocity" : 0.4704640507698059,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : -0.1577423214912415,
+				"y" : -0.2306652814149857
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_1_rope_0_3",
+			"position" : 
+			{
+				"x" : 19.30349540710449,
+				"y" : 8.159385681152344
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"name" : "fixture1",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : [ 0.5, 0.5, -0.5, -0.5 ],
+							"y" : [ -0.5, 0.5, 0.5, -0.5 ]
+						}
+					},
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "structure_1_hinge_0",
+			"position" : 
+			{
+				"x" : 18.14953613281250,
+				"y" : 8.954556465148926
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 1.018653273582458,
+			"angularVelocity" : -0.2253761440515518,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : -0.1861480176448822,
+				"y" : -0.2709081470966339
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_1_rope_0_2",
+			"position" : 
+			{
+				"x" : 18.95291519165039,
+				"y" : 8.356803894042969
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 6.840087962700636e-07,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 5,
+					"friction" : 0.2,
+					"name" : "fixture2",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : [ 0.35, 0.35, -0.35, -0.35 ],
+							"y" : [ -0.35, 0.35, 0.35, -0.35 ]
+						}
+					},
+					"restitution" : 0.1
+				}
+			],
+			"linearVelocity" : 0,
+			"massData-I" : 0.2000833153724670,
+			"massData-mass" : 2.45,
+			"name" : "block_0",
+			"position" : 
+			{
+				"x" : 12.80000114440918,
+				"y" : 5.764997482299805
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0.9411522746086121,
+			"angularVelocity" : -0.461440384387970,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : -0.1131020113825798,
+				"y" : -0.1547745913267136
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_1_rope_0_1",
+			"position" : 
+			{
+				"x" : 18.61983871459961,
+				"y" : 8.580217361450195
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : -0.1376897990703583,
+			"angularVelocity" : -0.3479985594749451,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 0,
+						"radius" : 0.3750
+					},
+					"density" : 20.0,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"restitution" : 0.1
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : 0.01393242925405502,
+				"y" : 0.03760783001780510
+			},
+			"massData-I" : 0.621262252330780,
+			"massData-mass" : 8.835729598999023,
+			"name" : "structure_1_ball",
+			"position" : 
+			{
+				"x" : 20.22151756286621,
+				"y" : 7.858097076416016
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : -0.4470644295215607,
+			"angularVelocity" : 0.1904684156179428,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : 0.03429853543639183,
+				"y" : -0.01657525636255741
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_1_rope_1_0",
+			"position" : 
+			{
+				"x" : 20.96306991577148,
+				"y" : 9.024212837219238
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : -0.4822445511817932,
+			"angularVelocity" : 0.1223815977573395,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : 0.09046356379985809,
+				"y" : -0.04412902146577835
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_1_rope_1_1",
+			"position" : 
+			{
+				"x" : 20.78359413146973,
+				"y" : 8.666152000427246
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1,
+					"friction" : 0.1,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : [ 1, 1, -1, -1 ],
+							"y" : [ -0.25, 0.25, 0.25, -0.25 ]
+						}
+					},
+					"restitution" : 0.1
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "platform_3",
+			"position" : 
+			{
+				"x" : 12.85000228881836,
+				"y" : 6.65
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0.8772281408309937,
+			"angularVelocity" : -0.2484534382820129,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : -0.03161798790097237,
+				"y" : -0.03833363205194473
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_1_rope_0_0",
+			"position" : 
+			{
+				"x" : 18.30333137512207,
+				"y" : 8.826700210571289
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 1.164539456367493,
+			"angularVelocity" : 0.8657689094543457,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : -0.03960267081856728,
+				"y" : 0.008917637169361115
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_1_rope_0_4",
+			"position" : 
+			{
+				"x" : 19.66632843017578,
+				"y" : 7.988586902618408
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : -0.5252553820610046,
+			"angularVelocity" : 0.001909070415422320,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : 0.1126871556043625,
+				"y" : -0.05531297624111176
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_1_rope_1_2",
+			"position" : 
+			{
+				"x" : 20.59026718139648,
+				"y" : 8.315412521362305
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"name" : "fixture1",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : [ 0.5, 0.5, -0.5, -0.5 ],
+							"y" : [ -0.5, 0.5, 0.5, -0.5 ]
+						}
+					},
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "structure_1_hinge_1",
+			"position" : 
+			{
+				"x" : 21.04953384399414,
+				"y" : 9.204556465148926
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1,
+					"friction" : 0.1,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : [ 1.25, 1.25, -1.25, -1.25 ],
+							"y" : [ -0.25, 0.25, 0.25, -0.25 ]
+						}
+					},
+					"restitution" : 0.1
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "platform_2",
+			"position" : 
+			{
+				"x" : 13.05000114440918,
+				"y" : 5.15
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 0,
+						"radius" : 0.25
+					},
+					"density" : 7,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"restitution" : 0.25,
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "star_1",
+			"position" : 
+			{
+				"x" : 9.35,
+				"y" : 4.5
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 0,
+						"radius" : 0.25
+					},
+					"density" : 7,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"restitution" : 0.25,
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "star_2",
+			"position" : 
+			{
+				"x" : 15.250,
+				"y" : 6.5
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 0,
+						"radius" : 0.25
+					},
+					"density" : 7,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"restitution" : 0.25,
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "star_0",
+			"position" : 
+			{
+				"x" : 14.04999923706055,
+				"y" : 2
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0.8731514215469360,
+			"angularVelocity" : -0.7786951661109924,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : -0.1688141673803329,
+				"y" : -0.2526178658008575
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_0_rope_0_4",
+			"position" : 
+			{
+				"x" : 3.613921880722046,
+				"y" : 7.308460712432861
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0.8335871100425720,
+			"angularVelocity" : -0.7466744780540466,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : 0.02560519985854626,
+				"y" : -0.01755028590559959
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_0_rope_0_3",
+			"position" : 
+			{
+				"x" : 3.310972690582275,
+				"y" : 7.572813987731934
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0.8183099031448364,
+			"angularVelocity" : -0.3314323723316193,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : 0.1664587110280991,
+				"y" : 0.1457422375679016
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_0_rope_0_2",
+			"position" : 
+			{
+				"x" : 3.015336990356445,
+				"y" : 7.845390319824219
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : -1.07810103893280,
+			"angularVelocity" : -0.3693294525146484,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : -0.1421030461788177,
+				"y" : 0.2080737203359604
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_0_rope_1_2",
+			"position" : 
+			{
+				"x" : 5.061820507049561,
+				"y" : 7.448580265045166
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0.004654204938560724,
+			"angularVelocity" : 1.057513594627380,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 0,
+						"radius" : 0.3750
+					},
+					"density" : 20.0,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"restitution" : 0.1
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : -0.2591455578804016,
+				"y" : 0.02095356583595276
+			},
+			"massData-I" : 0.621262252330780,
+			"massData-mass" : 8.835729598999023,
+			"name" : "structure_0_ball",
+			"position" : 
+			{
+				"x" : 4.143900871276855,
+				"y" : 7.180397033691406
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 1.885672418211470e-07,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 5,
+					"friction" : 0.2,
+					"name" : "fixture3",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : [ 0.45, 0.45, -0.45, -0.45 ],
+							"y" : [ -0.45, 0.45, 0.45, -0.45 ]
+						}
+					},
+					"restitution" : 0.1
+				}
+			],
+			"linearVelocity" : 0,
+			"massData-I" : 0.5467498898506165,
+			"massData-mass" : 4.05,
+			"name" : "block_1",
+			"position" : 
+			{
+				"x" : 12.36277389526367,
+				"y" : 3.464998722076416
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1,
+					"friction" : 0.1,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : [ 1.5, 1.5, -1.5, -1.5 ],
+							"y" : [ -0.25, 0.25, 0.25, -0.25 ]
+						}
+					},
+					"restitution" : 0.1
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "platform_0",
+			"position" : 
+			{
+				"x" : 7.25,
+				"y" : 3.7
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture2",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : [ -0.5, -1, -1.5, -1.5 ],
+							"y" : [ 0.25, 0.75, 0.75, -0.25 ]
+						}
+					}
+				},
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture2",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : [ 1.5, 1.5, -0.5, -1.5 ],
+							"y" : [ -0.25, 0.25, 0.25, -0.25 ]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "platform_1",
+			"position" : 
+			{
+				"x" : 11.50,
+				"y" : 2.75
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : -0.9303645491600037,
+			"angularVelocity" : -0.1856266111135483,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : -0.02229129709303379,
+				"y" : 0.02968817576766014
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_0_rope_1_0",
+			"position" : 
+			{
+				"x" : 5.739632606506348,
+				"y" : 7.880491256713867
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : -1.002611637115479,
+			"angularVelocity" : -0.2602915763854980,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : -0.07557362318038940,
+				"y" : 0.1011234596371651
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_0_rope_1_1",
+			"position" : 
+			{
+				"x" : 5.408726215362549,
+				"y" : 7.651961326599121
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"name" : "fixture1",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : [ 0.5, 0.5, -0.5, -0.5 ],
+							"y" : [ -0.5, 0.5, 0.5, -0.5 ]
+						}
+					},
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "structure_0_hinge_1",
+			"position" : 
+			{
+				"x" : 5.9,
+				"y" : 8
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"name" : "fixture1",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : [ 0.5, 0.5, -0.5, -0.5 ],
+							"y" : [ -0.5, 0.5, 0.5, -0.5 ]
+						}
+					},
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "structure_0_hinge_0",
+			"position" : 
+			{
+				"x" : 2.3,
+				"y" : 8.55
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0.7717964053153992,
+			"angularVelocity" : 0.4986843764781952,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : 0.07206625491380692,
+				"y" : 0.06894853711128235
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_0_rope_0_0",
+			"position" : 
+			{
+				"x" : 2.439484834671021,
+				"y" : 8.406668663024902
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0.8013123273849487,
+			"angularVelocity" : 0.2186264246702194,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 3.5,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.09900000691413879,
+								0.09900000691413879,
+								-0.09900000691413879,
+								-0.09900000691413879
+							],
+							"y" : 
+							[
+								-0.1950000226497650,
+								0.1950000226497650,
+								0.1950000226497650,
+								-0.1950000226497650
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 
+			{
+				"x" : 0.1777324229478836,
+				"y" : 0.1660542339086533
+			},
+			"massData-I" : 0.004308646544814110,
+			"massData-mass" : 0.2702700495719910,
+			"name" : "structure_0_rope_0_1",
+			"position" : 
+			{
+				"x" : 2.724121809005737,
+				"y" : 8.122671127319336
+			},
+			"type" : 2
+		}
+	],
+	"collisionbitplanes" : 
+	{
+		"names" : 
+		[
+			"bitplane1",
+			"bitplane2",
+			"bitplane3",
+			"bitplane4",
+			"bitplane5",
+			"bitplane6",
+			"bitplane7",
+			"bitplane8",
+			"bitplane9",
+			"bitplane10",
+			"bitplane11",
+			"bitplane12",
+			"bitplane13",
+			"bitplane14",
+			"bitplane15",
+			"bitplane16",
+			"bitplane17",
+			"bitplane18",
+			"bitplane19",
+			"bitplane20",
+			"bitplane21",
+			"bitplane22",
+			"bitplane23",
+			"bitplane24",
+			"bitplane25",
+			"bitplane26",
+			"bitplane27",
+			"bitplane28",
+			"bitplane29",
+			"bitplane30",
+			"bitplane31",
+			"bitplane32"
+		]
+	},
+	"continuousPhysics" : true,
+	"gravity" : 
+	{
+		"x" : 0,
+		"y" : -10
+	},
+	"image" : 
+	[
+		
+		{
+			"aspectScale" : 1,
+			"body" : 25,
+			"center" : 
+			{
+				"x" : -1.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ -1.5, -1, -1, -1.5 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_center.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -1.5, -0.25, -1, -0.25, -1, 0.25, -1.5, 0.25 ],
+			"name" : "image5",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 1,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../Resources/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 3,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../Resources/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 24,
+			"center" : 
+			{
+				"x" : 1.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 1, 1.5, 1.5, 1 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_right.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 1, -0.25, 1.5, -0.25, 1.5, 0.25, 1, 0.25 ],
+			"name" : "image8",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 10,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../Resources/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 25,
+			"center" : 
+			{
+				"x" : -0.75,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ -1, -0.5, -0.5, -1 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_hill_right_2.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -1, -0.25, -0.5, -0.25, -0.5, 0.25, -1, 0.25 ],
+			"name" : "image4",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 22,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.3750, 0.3750, 0.3750, -0.3750 ],
+				"y" : [ -0.3750, -0.3750, 0.3750, 0.3750 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/large_resources/game/jammer_3.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.3750, -0.3750, 0.3750, -0.3750, 0.3750, 0.3750, -0.3750, 0.3750 ],
+			"name" : "image10",
+			"opacity" : 0.5,
+			"scale" : 0.75
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 14,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.25, 0.25, 0.25, -0.25 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.25, -0.25, 0.25, -0.25, 0.25, 0.25, -0.25, 0.25 ],
+			"name" : "image9",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 14,
+			"center" : 
+			{
+				"x" : -1,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ -1.25, -0.75, -0.75, -1.25 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_left.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -1.25, -0.25, -0.75, -0.25, -0.75, 0.25, -1.25, 0.25 ],
+			"name" : "image7",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 23,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.45, 0.45, 0.45, -0.45 ],
+				"y" : [ -0.45, -0.45, 0.45, 0.45 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/large_resources/game/block_1.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.45, -0.45, 0.45, -0.45, 0.45, 0.45, -0.45, 0.45 ],
+			"name" : "image6",
+			"opacity" : 0.5,
+			"scale" : 0.9
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 30,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 25,
+			"center" : 
+			{
+				"x" : -0.7476606369018555,
+				"y" : 0.5
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.9976606369018555,
+					-0.4976606369018555,
+					-0.4976606369018555,
+					-0.9976606369018555
+				],
+				"y" : [ 0.25, 0.25, 0.75, 0.75 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_hill_right.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.9976606369018555,
+				0.25,
+				-0.4976606369018555,
+				0.25,
+				-0.4976606369018555,
+				0.75,
+				-0.9976606369018555,
+				0.75
+			],
+			"name" : "image3",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 7,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../Resources/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 24,
+			"center" : 
+			{
+				"x" : 0.75,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 0.5, 1, 1, 0.5 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 0.5, -0.25, 1, -0.25, 1, 0.25, 0.5, 0.25 ],
+			"name" : "image9",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 0,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 25,
+			"center" : 
+			{
+				"x" : 0.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 0.0, 0.5, 0.5, 0.0 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 0.0, -0.25, 0.5, -0.25, 0.5, 0.25, 0.0, 0.25 ],
+			"name" : "image1",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 24,
+			"center" : 
+			{
+				"x" : -1.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ -1.5, -1, -1, -1.5 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_left.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -1.5, -0.25, -1, -0.25, -1, 0.25, -1.5, 0.25 ],
+			"name" : "image7",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 14,
+			"center" : 
+			{
+				"x" : 0.5,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 0.25, 0.75, 0.75, 0.25 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 0.25, -0.25, 0.75, -0.25, 0.75, 0.25, 0.25, 0.25 ],
+			"name" : "image9",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 6,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.3750, 0.3750, 0.3750, -0.3750 ],
+				"y" : [ -0.3750, -0.3750, 0.3750, 0.3750 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/large_resources/game/jammer_2.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.3750, -0.3750, 0.3750, -0.3750, 0.3750, 0.3750, -0.3750, 0.3750 ],
+			"name" : "image10",
+			"opacity" : 0.5,
+			"scale" : 0.75
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 19,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 25,
+			"center" : 
+			{
+				"x" : -0.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ -0.5, 0.0, 0.0, -0.5 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.5, -0.25, 0.0, -0.25, 0.0, 0.25, -0.5, 0.25 ],
+			"name" : "image1",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 9,
+			"center" : 
+			{
+				"x" : 0.75,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 0.5, 1, 1, 0.5 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_right.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 0.5, -0.25, 1, -0.25, 1, 0.25, 0.5, 0.25 ],
+			"name" : "image8",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 25,
+			"center" : 
+			{
+				"x" : 1.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 1, 1.5, 1.5, 1 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_right.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 1, -0.25, 1.5, -0.25, 1.5, 0.25, 1, 0.25 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 24,
+			"center" : 
+			{
+				"x" : -0.75,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ -1, -0.5, -0.5, -1 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -1, -0.25, -0.5, -0.25, -0.5, 0.25, -1, 0.25 ],
+			"name" : "image9",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 20,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 9,
+			"center" : 
+			{
+				"x" : -0.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ -0.5, 0.0, 0.0, -0.5 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.5, -0.25, 0.0, -0.25, 0.0, 0.25, -0.5, 0.25 ],
+			"name" : "image9",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 18,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 21,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 25,
+			"center" : 
+			{
+				"x" : 0.75,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 0.5, 1, 1, 0.5 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 0.5, -0.25, 1, -0.25, 1, 0.25, 0.5, 0.25 ],
+			"name" : "image1",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 5,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../Resources/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 24,
+			"center" : 
+			{
+				"x" : -0.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ -0.5, 0.0, 0.0, -0.5 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.5, -0.25, 0.0, -0.25, 0.0, 0.25, -0.5, 0.25 ],
+			"name" : "image9",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 26,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 8,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../Resources/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 12,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../Resources/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 25,
+			"center" : 
+			{
+				"x" : -1.25,
+				"y" : 0.5
+			},
+			"corners" : 
+			{
+				"x" : [ -1.5, -1, -1, -1.5 ],
+				"y" : [ 0.25, 0.25, 0.75, 0.75 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_left.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -1.5, 0.25, -1, 0.25, -1, 0.75, -1.5, 0.75 ],
+			"name" : "image2",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 9,
+			"center" : 
+			{
+				"x" : 0.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 0.0, 0.5, 0.5, 0.0 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 0.0, -0.25, 0.5, -0.25, 0.5, 0.25, 0.0, 0.25 ],
+			"name" : "image9",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 27,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 31,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image11",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 9,
+			"center" : 
+			{
+				"x" : -0.75,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ -1, -0.5, -0.5, -1 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_left.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -1, -0.25, -0.5, -0.25, -0.5, 0.25, -1, 0.25 ],
+			"name" : "image7",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 4,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.35, 0.35, 0.35, -0.35 ],
+				"y" : [ -0.35, -0.35, 0.35, 0.35 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/large_resources/game/block_4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.35, -0.35, 0.35, -0.35, 0.35, 0.35, -0.35, 0.35 ],
+			"name" : "image14",
+			"opacity" : 0.5,
+			"scale" : 0.7
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 14,
+			"center" : 
+			{
+				"x" : -0.5,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ -0.75, -0.25, -0.25, -0.75 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.75, -0.25, -0.25, -0.25, -0.25, 0.25, -0.75, 0.25 ],
+			"name" : "image9",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 11,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -0.2, 0.2, 0.2, -0.2 ],
+				"y" : [ -0.2, -0.2, 0.2, 0.2 ]
+			},
+			"file" : "../Resources/chain_link.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -0.2, -0.2, 0.2, -0.2, 0.2, 0.2, -0.2, 0.2 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 0.4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 14,
+			"center" : 
+			{
+				"x" : 1,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 0.75, 1.25, 1.25, 0.75 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_right.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 0.75, -0.25, 1.25, -0.25, 1.25, 0.25, 0.75, 0.25 ],
+			"name" : "image8",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 24,
+			"center" : 
+			{
+				"x" : 0.25,
+				"y" : 0
+			},
+			"corners" : 
+			{
+				"x" : [ 0.0, 0.5, 0.5, 0.0 ],
+				"y" : [ -0.25, -0.25, 0.25, 0.25 ]
+			},
+			"file" : "../../../Repositories/Drop 'em/Resources/small_resources/game/choco_mid.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ 0.0, -0.25, 0.5, -0.25, 0.5, 0.25, 0.0, 0.25 ],
+			"name" : "image9",
+			"opacity" : 0.5,
+			"scale" : 0.5
+		}
+	],
+	"joint" : 
+	[
+		
+		{
+			"anchorA" : 
+			{
+				"x" : -2.235174179077148e-08,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : 0.3750002682209015,
+				"y" : -9.778887033462524e-08
+			},
+			"bodyA" : 0,
+			"bodyB" : 22,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : 1.466498613357544,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint6",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : 1.564621925354004e-07,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : 2.235174179077148e-08,
+				"y" : 0.2
+			},
+			"bodyA" : 21,
+			"bodyB" : 0,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : -0.03965553641319275,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint0",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 0,
+			"anchorB" : 
+			{
+				"x" : 5.215406417846680e-08,
+				"y" : 0.2
+			},
+			"bodyA" : 13,
+			"bodyB" : 7,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : 0.1904684156179428,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint3",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : 2.235174179077148e-08,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : -0.3749995529651642,
+				"y" : 1.415610313415527e-07
+			},
+			"bodyA" : 11,
+			"bodyB" : 6,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : -1.213767528533936,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint8",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 0,
+			"anchorB" : 
+			{
+				"x" : 5.513429641723633e-07,
+				"y" : 0.2
+			},
+			"bodyA" : 2,
+			"bodyB" : 10,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : -0.2484534382820129,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint1",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : 2.682209014892578e-07,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : 9.685754776000977e-08,
+				"y" : 0.2
+			},
+			"bodyA" : 3,
+			"bodyB" : 1,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : 0.6958401799201965,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint0",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : -9.685754776000977e-08,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : -4.619359970092773e-07,
+				"y" : 0.2
+			},
+			"bodyA" : 1,
+			"bodyB" : 11,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : 0.3953048586845398,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint0",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : -5.513429641723633e-07,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : -4.395842552185059e-07,
+				"y" : 0.2
+			},
+			"bodyA" : 10,
+			"bodyB" : 5,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : -0.2129869461059570,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint0",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : -5.215406417846680e-08,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : 7.301568984985352e-07,
+				"y" : 0.2
+			},
+			"bodyA" : 7,
+			"bodyB" : 8,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : -0.06808681786060333,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint4",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : 4.395842552185059e-07,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : -2.682209014892578e-07,
+				"y" : 0.2
+			},
+			"bodyA" : 5,
+			"bodyB" : 3,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : 0.2360642403364182,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint0",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : -7.301568984985352e-07,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : -3.948807716369629e-07,
+				"y" : 0.2
+			},
+			"bodyA" : 8,
+			"bodyB" : 12,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : -0.1204725280404091,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint5",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : 3.948807716369629e-07,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : 0.2266648113727570,
+				"y" : 0.3179083764553070
+			},
+			"bodyA" : 12,
+			"bodyB" : 6,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : -0.3499076366424561,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint9",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : 7.450580596923828e-08,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : -0.3750000298023224,
+				"y" : 9.662471711635590e-08
+			},
+			"bodyA" : 18,
+			"bodyB" : 22,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : 1.836208820343018,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint2",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : 5.215406417846680e-08,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : -7.450580596923828e-08,
+				"y" : 0.2
+			},
+			"bodyA" : 19,
+			"bodyB" : 18,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : -0.03202068805694580,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint0",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : 1.490116119384766e-07,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : -5.215406417846680e-08,
+				"y" : 0.2
+			},
+			"bodyA" : 20,
+			"bodyB" : 19,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : -0.4152421057224274,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint0",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : -1.043081283569336e-07,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : -1.490116119384766e-07,
+				"y" : 0.2
+			},
+			"bodyA" : 31,
+			"bodyB" : 20,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : -0.5500587821006775,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint0",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : 1.564621925354004e-07,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : -1.564621925354004e-07,
+				"y" : 0.2
+			},
+			"bodyA" : 27,
+			"bodyB" : 21,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : -0.1090378761291504,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint0",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 0,
+			"anchorB" : 
+			{
+				"x" : -1.043081283569336e-07,
+				"y" : 0.2
+			},
+			"bodyA" : 29,
+			"bodyB" : 30,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : 0.4986843764781952,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint1",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : 1.043081283569336e-07,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : -2.384185791015625e-07,
+				"y" : 0.2
+			},
+			"bodyA" : 30,
+			"bodyB" : 31,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : -0.2800579667091370,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint0",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 
+			{
+				"x" : -1.490116119384766e-08,
+				"y" : -0.2
+			},
+			"anchorB" : 
+			{
+				"x" : -1.564621925354004e-07,
+				"y" : 0.2
+			},
+			"bodyA" : 26,
+			"bodyB" : 27,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : -0.07466496527194977,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint0",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		},
+		
+		{
+			"anchorA" : 0,
+			"anchorB" : 
+			{
+				"x" : 1.490116119384766e-08,
+				"y" : 0.2
+			},
+			"bodyA" : 28,
+			"bodyB" : 26,
+			"enableLimit" : false,
+			"enableMotor" : false,
+			"jointSpeed" : -0.1856266111135483,
+			"lowerLimit" : 0,
+			"maxMotorTorque" : 0,
+			"motorSpeed" : 0,
+			"name" : "joint1",
+			"refAngle" : 0,
+			"type" : "revolute",
+			"upperLimit" : 0
+		}
+	],
+	"positionIterations" : 3,
+	"stepsPerSecond" : 60.0,
+	"subStepping" : false,
+	"velocityIterations" : 8,
+	"warmStarting" : true
+}
