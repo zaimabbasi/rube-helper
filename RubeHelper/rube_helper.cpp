@@ -1,13 +1,12 @@
 #include "rube_helper.h"
 
-string structure = "structure";
-string rope_literal = "rope";
-string hinge = "hinge";
-string jammer = "ball";
-string platform = "platform";
-string block = "block";
-string star = "star";
-string background = "background";
+string literal_rope_structure = "structure";
+string literal_rope = "rope";
+string literal_hinge = "hinge";
+string literal_jammer = "jammer";
+string literal_platform = "platform";
+string literal_enemy = "enemy";
+string literal_coin = "coin";
 
 bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int world_id, int level_id)
 {
@@ -47,17 +46,14 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
         // insert top level members
         output_document.AddMember("world_id", world_id, allocator);
         output_document.AddMember("level_id", level_id, allocator);
+        output_document.AddMember("level_time", 60, allocator);     // -1 = set manually when using for game
+        output_document.AddMember("world_center_x", 0, allocator);
+        output_document.AddMember("world_center_y", 0, allocator);
         
         rapidjson::Value rope_structures_array(rapidjson::kArrayType);
-        rapidjson::Value blocks_array(rapidjson::kArrayType);
+        rapidjson::Value enemies_array(rapidjson::kArrayType);
         rapidjson::Value platforms_array(rapidjson::kArrayType);
-        rapidjson::Value stars_array(rapidjson::kArrayType);
-        rapidjson::Value world_size(rapidjson::kObjectType);
-        
-        unsigned int maxX = 0, maxY = 0;
-        
-        maxX = input_document["body"][0]["position"]["x"].GetFloat();
-        maxY = input_document["body"][0]["position"]["y"].GetFloat();
+        rapidjson::Value coins_array(rapidjson::kArrayType);
         
         
         // ZERO PASS
@@ -65,26 +61,18 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
         {
             string body_name = input_document["body"][i]["name"].GetString();
             
-            if (maxX < input_document["body"][i]["position"]["x"].GetFloat())
-            {
-                maxX = input_document["body"][i]["position"]["x"].GetFloat();
-            }
-            if (maxY < input_document["body"][i]["position"]["y"].GetFloat())
-            {
-                maxY = input_document["body"][i]["position"]["y"].GetFloat();
-            }
             
             // check if its rope_structure, platform, block or star
-            if (body_name.find(structure) != string::npos)
+            if (body_name.find(literal_rope_structure) != string::npos)
             {
-                if (body_name.find(jammer) != string::npos)
+                if (body_name.find(literal_jammer) != string::npos)
                 {
                     // its a jammer body
                     rapidjson::Value jammer(rapidjson::kObjectType);
                     rope_structures_array.PushBack(jammer, allocator);
                 }
             }
-            else if (body_name.find(block) != string::npos)
+            else if (body_name.find(literal_enemy) != string::npos)
             {
                 rapidjson::Value block(rapidjson::kObjectType);
                 rapidjson::Value position(rapidjson::kObjectType);
@@ -131,9 +119,9 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
                 }
                 
                 block.AddMember("image", images_array, allocator);
-                blocks_array.PushBack(block, allocator);
+                enemies_array.PushBack(block, allocator);
             }
-            else if (body_name.find(platform) != string::npos)
+            else if (body_name.find(literal_platform) != string::npos)
             {
                 rapidjson::Value position(rapidjson::kObjectType);
                 rapidjson::Value platform(rapidjson::kObjectType);
@@ -183,7 +171,7 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
                 platform.AddMember("image", image_array, allocator);
                 platforms_array.PushBack(platform, allocator);
             }
-            else if (body_name.find(star) != string::npos)
+            else if (body_name.find(literal_coin) != string::npos)
             {
                 rapidjson::Value position(rapidjson::kObjectType);
                 rapidjson::Value star(rapidjson::kObjectType);
@@ -231,7 +219,7 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
                 }
                 
                 star.AddMember("image", images_rray, allocator);
-                stars_array.PushBack(star, allocator);
+                coins_array.PushBack(star, allocator);
             }
         }
         // FIRST PASS END
@@ -242,9 +230,9 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
         {
             string body_name = input_document["body"][i]["name"].GetString();
             
-            if (body_name.find(structure) != string::npos)
+            if (body_name.find(literal_rope_structure) != string::npos)
             {
-                if (body_name.find(jammer) != string::npos)
+                if (body_name.find(literal_jammer) != string::npos)
                 {
                     // its a jammer body
                     rapidjson::Value jammer_body(rapidjson::kObjectType);
@@ -327,10 +315,10 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
             {
                 string body_name = input_document["body"][j]["name"].GetString();
                 
-                if (body_name.find(structure) != string::npos)
+                if (body_name.find(literal_rope_structure) != string::npos)
                 {
                     
-                    if (body_name.find(rope_literal) != string::npos)
+                    if (body_name.find(literal_rope) != string::npos)
                     {
                         // find ropestructure index
                         int structure_id = rope_structure_id(body_name);
@@ -409,9 +397,9 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
             {
                 string body_name = input_document["body"][j]["name"].GetString();
                 
-                if (body_name.find(structure) != string::npos)
+                if (body_name.find(literal_rope_structure) != string::npos)
                 {
-                    if (body_name.find(rope_literal) != string::npos)
+                    if (body_name.find(literal_rope) != string::npos)
                     {
                         // find ropestructure index
                         int structure_id = rope_structure_id(body_name);
@@ -483,7 +471,7 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
         {
             string body_name = input_document["body"][i]["name"].GetString();
             
-            if (body_name.find(hinge) != string::npos)
+            if (body_name.find(literal_hinge) != string::npos)
             {
                 // add hinge
                 rapidjson::Value hinge_body(rapidjson::kObjectType);
@@ -599,13 +587,11 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
         
         output_document.AddMember("rope_structure", rope_structures_array, allocator);
         output_document.AddMember("platform", platforms_array, allocator);
-        output_document.AddMember("block", blocks_array, allocator);
-        output_document.AddMember("star", stars_array, allocator);
+        output_document.AddMember("enemy", enemies_array, allocator);
+        output_document.AddMember("coin", coins_array, allocator);
         output_document.AddMember("joint", input_document["joint"].GetArray(), allocator);
         
-        world_size.AddMember("max_x", maxX, allocator);
-        world_size.AddMember("max_y", maxY, allocator);
-        output_document.AddMember("world_size", world_size, allocator);
+        
         
         // writing to target file
         rapidjson::StringBuffer strbuf;
@@ -625,21 +611,6 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
     return false;
 }
 
-int RubeHelper::background_id(std::string imageName)
-{
-    char bgIndex[3];
-    int chItr;
-    int chItr2;
-    
-    chItr = ((int)background.length()) + 1;
-    chItr2 = 0;
-    for (; imageName[chItr] != '_'; chItr++)
-    {
-        bgIndex[chItr2++] = imageName[chItr];
-    }
-    
-    return atoi(bgIndex);
-}
 
 int RubeHelper::rope_structure_id(std::string bodyName)
 {
@@ -647,7 +618,7 @@ int RubeHelper::rope_structure_id(std::string bodyName)
     int itr;
     int itr_2;
     
-    itr = ((int)structure.length()) + 1;
+    itr = ((int)literal_rope_structure.length()) + 1;
     itr_2 = 0;
     
     for (; bodyName[itr] != '_'; itr++)
@@ -664,7 +635,7 @@ int RubeHelper::rope_id(std::string body_name)
     int itr;
     int itr_2;
     
-    itr = ((int)structure.length()) + 1;
+    itr = ((int)literal_rope_structure.length()) + 1;
     itr_2 = 0;
     
     for (; body_name[itr] != '_'; itr++)
@@ -673,7 +644,7 @@ int RubeHelper::rope_id(std::string body_name)
     }
     
     char rope_id[3];
-    itr += ((int)rope_literal.length()) + 2;
+    itr += ((int)literal_rope.length()) + 2;
     itr_2 = 0;
     
     for (; body_name[itr] != '_'; itr++)
@@ -691,7 +662,7 @@ int RubeHelper::rope_body_id(std::string body_name)
     int itr;
     int itr_2;
     
-    itr = ((int)structure.length()) + 1;
+    itr = ((int)literal_rope_structure.length()) + 1;
     itr_2 = 0;
     for (; body_name[itr] != '_'; itr++)
     {
@@ -700,7 +671,7 @@ int RubeHelper::rope_body_id(std::string body_name)
     
     // find rope index
     char rope_id[3];
-    itr += ((int)rope_literal.length()) + 2;
+    itr += ((int)literal_rope.length()) + 2;
     itr_2 = 0;
     
     for (; body_name[itr] != '_'; itr++)
@@ -728,7 +699,7 @@ int RubeHelper::hinge_id(std::string body_name)
     int itr;
     int itr_2;
     
-    itr = (int)structure.length()+1;
+    itr = (int)literal_rope_structure.length()+1;
     itr_2 = 0;
     for (; body_name[itr] != '_'; itr++)
     {
@@ -738,7 +709,7 @@ int RubeHelper::hinge_id(std::string body_name)
     // find hinge index
     char hinge_id[3];
     
-    itr += hinge.length()+2;
+    itr += literal_hinge.length()+2;
     itr_2 = 0;
     
     for (; itr < (int)body_name.length(); itr++)

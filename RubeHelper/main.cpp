@@ -3,8 +3,8 @@
 
 #define BUILD_ALL   1
 
-#define WORLD_COUNT 3
-#define LEVEL_COUNT 5
+#define WORLD_COUNT 1
+#define LEVEL_COUNT 15
 
 int main(int argc, const char * argv[]) {
     
@@ -13,8 +13,8 @@ int main(int argc, const char * argv[]) {
     
     if (!BUILD_ALL)
     {
-        int world_id = 2;
-        int level_id = 4;
+        int world_id = 0;
+        int level_id = 0;
         
         res_path = "res/level_"+std::to_string(world_id)+"_"+std::to_string(level_id)+".json";
         tar_path = "tar/level_"+std::to_string(world_id)+"_"+std::to_string(level_id)+".json";
