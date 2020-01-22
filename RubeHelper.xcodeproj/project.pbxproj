@@ -24,7 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B355C6501F543F19006F7308 /* RawJsonConverter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RawJsonConverter; sourceTree = BUILT_PRODUCTS_DIR; };
+		B355C6501F543F19006F7308 /* RubeHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RubeHelper; sourceTree = BUILT_PRODUCTS_DIR; };
 		B355C6531F543F19006F7308 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B355C65A1F543F5C006F7308 /* rube_helper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rube_helper.cpp; sourceTree = "<group>"; };
 		B355C65B1F543F5C006F7308 /* rube_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rube_helper.h; sourceTree = "<group>"; };
@@ -64,6 +64,8 @@
 		B355C6821F5441E9006F7308 /* stream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stream.h; sourceTree = "<group>"; };
 		B355C6831F5441E9006F7308 /* stringbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stringbuffer.h; sourceTree = "<group>"; };
 		B355C6841F5441E9006F7308 /* writer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
+		B37CD25023C860C10079AE39 /* tar */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tar; sourceTree = "<group>"; };
+		B37CD25123C860C10079AE39 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +90,7 @@
 		B355C6511F543F19006F7308 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B355C6501F543F19006F7308 /* RawJsonConverter */,
+				B355C6501F543F19006F7308 /* RubeHelper */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,10 +98,12 @@
 		B355C6521F543F19006F7308 /* RubeHelper */ = {
 			isa = PBXGroup;
 			children = (
-				B355C65D1F5441E9006F7308 /* json */,
+				B37CD25123C860C10079AE39 /* res */,
+				B37CD25023C860C10079AE39 /* tar */,
 				B355C6531F543F19006F7308 /* main.cpp */,
 				B355C65A1F543F5C006F7308 /* rube_helper.cpp */,
 				B355C65B1F543F5C006F7308 /* rube_helper.h */,
+				B355C65D1F5441E9006F7308 /* json */,
 			);
 			path = RubeHelper;
 			sourceTree = "<group>";
@@ -174,9 +178,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B355C64F1F543F19006F7308 /* RawJsonConverter */ = {
+		B355C64F1F543F19006F7308 /* RubeHelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B355C6571F543F19006F7308 /* Build configuration list for PBXNativeTarget "RawJsonConverter" */;
+			buildConfigurationList = B355C6571F543F19006F7308 /* Build configuration list for PBXNativeTarget "RubeHelper" */;
 			buildPhases = (
 				B355C64C1F543F19006F7308 /* Sources */,
 				B355C64D1F543F19006F7308 /* Frameworks */,
@@ -186,9 +190,9 @@
 			);
 			dependencies = (
 			);
-			name = RawJsonConverter;
+			name = RubeHelper;
 			productName = RawJsonConverter;
-			productReference = B355C6501F543F19006F7308 /* RawJsonConverter */;
+			productReference = B355C6501F543F19006F7308 /* RubeHelper */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -197,7 +201,7 @@
 		B355C6481F543F18006F7308 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Zaim Abbasi";
 				TargetAttributes = {
 					B355C64F1F543F19006F7308 = {
@@ -220,7 +224,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B355C64F1F543F19006F7308 /* RawJsonConverter */,
+				B355C64F1F543F19006F7308 /* RubeHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -242,6 +246,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -252,6 +257,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -259,6 +265,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -296,6 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -306,6 +314,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -313,6 +322,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -342,6 +352,7 @@
 		B355C6581F543F19006F7308 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				DEVELOPMENT_TEAM = HA97Y2RKHX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -350,6 +361,7 @@
 		B355C6591F543F19006F7308 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				DEVELOPMENT_TEAM = HA97Y2RKHX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -367,7 +379,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B355C6571F543F19006F7308 /* Build configuration list for PBXNativeTarget "RawJsonConverter" */ = {
+		B355C6571F543F19006F7308 /* Build configuration list for PBXNativeTarget "RubeHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B355C6581F543F19006F7308 /* Debug */,

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "rube_helper.h"
 
-#define BUILD_ALL   1
+#define BUILD_ALL   0
 
 #define WORLD_COUNT 1
 #define LEVEL_COUNT 15
