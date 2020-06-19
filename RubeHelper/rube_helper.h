@@ -16,7 +16,7 @@ public:
     RubeHelper() { };
     ~RubeHelper() { };
     
-    static bool parse_level(std::string res_path, std::string tar_path, int world_id, int level_id);
+    static bool parse_level(std::string res_path, std::string tar_path, int level_id);
 private:
     static int background_id(std::string image_name);
     static int rope_structure_id(std::string body_name);

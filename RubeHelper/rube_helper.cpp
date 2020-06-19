@@ -9,7 +9,7 @@ string literal_enemy = "enemy";
 string literal_collectable = "collectable";
 
 
-bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int world_id, int level_id)
+bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int level_id)
 {
     ifstream input_file;
     input_file.open(res_path);
@@ -45,7 +45,6 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int wor
         rapidjson::Document::AllocatorType& allocator = output_document.GetAllocator();
         
         
-        output_document.AddMember("world_id", world_id, allocator);
         output_document.AddMember("level_id", level_id, allocator);
         output_document.AddMember("level_time", 60, allocator);
         output_document.AddMember("world_center_x", 0, allocator);
