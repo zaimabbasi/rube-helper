@@ -60,7 +60,32 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int lev
         // ZERO PASS
         for (int i = 0; i < body_count; i++)
         {
+            rapidjson::Value position(rapidjson::kObjectType);
+            rapidjson::Value fixtures_array(rapidjson::kArrayType);
+            
+    
             string body_name = input_document["body"][i]["name"].GetString();
+
+            float angle = input_document["body"][i]["angle"].GetFloat();
+            int body_type = input_document["body"][i]["type"].GetInt();
+            
+            
+
+            if (input_document["body"][i]["position"] == 0)
+            {
+                position.AddMember("x", 0.f, allocator);
+                position.AddMember("y", 0.f, allocator);
+            }
+            else
+            {
+                position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
+                position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
+            }
+            
+            for (int j = 0; j < input_document["body"][i]["fixture"].Size(); j++)
+            {
+                fixtures_array.PushBack(input_document["body"][i]["fixture"][j], allocator);
+            }
             
             
             if (body_name.find(literal_rope_structure) != string::npos)
@@ -74,35 +99,11 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int lev
             else if (body_name.find(literal_enemy) != string::npos)
             {
                 rapidjson::Value enemy(rapidjson::kObjectType);
-                rapidjson::Value position(rapidjson::kObjectType);
-                rapidjson::Value fixtures_array(rapidjson::kArrayType);
-//                rapidjson::Value images_array(rapidjson::kArrayType);
-                
-                enemy.AddMember("global_index", i, allocator);
-                
-                if (input_document["body"][i]["position"] == 0)
-                {
-                    position.AddMember("x", 0.f, allocator);
-                    position.AddMember("y", 0.f, allocator);
-                }
-                else
-                {
-                    position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
-                    position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
-                }
-                
-                enemy.AddMember("position", position, allocator);
-                enemy.AddMember("angle", input_document["body"][i]["angle"].GetFloat(), allocator);
-                enemy.AddMember("type", input_document["body"][i]["type"].GetInt(), allocator);
 
-                
-                
-                for (int j = 0; j < input_document["body"][i]["fixture"].Size(); j++)
-                {
-                    fixtures_array.PushBack(input_document["body"][i]["fixture"][j], allocator);
-                    fixtures_array[j].RemoveMember("name");
-                }
-                
+                enemy.AddMember("global_index", i, allocator);
+                enemy.AddMember("position", position, allocator);
+                enemy.AddMember("angle", angle, allocator);
+                enemy.AddMember("type", body_type, allocator);
                 enemy.AddMember("fixture", fixtures_array, allocator);
                 
 //                int image_count = input_document["image"].Size();
@@ -135,37 +136,12 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int lev
             else if (body_name.find(literal_platform) != string::npos)
             {
                 rapidjson::Value platform(rapidjson::kObjectType);
-                rapidjson::Value position(rapidjson::kObjectType);
-                rapidjson::Value fixtures_array(rapidjson::kArrayType);
-//                rapidjson::Value image_array(rapidjson::kArrayType);
                 
                 platform.AddMember("global_index", i, allocator);
-                
-                if (input_document["body"][i]["position"] == 0)
-                {
-                    position.AddMember("x", 0.f, allocator);
-                    position.AddMember("y", 0.f, allocator);
-                }
-                else
-                {
-                    position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
-                    position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
-                }
-                
                 platform.AddMember("position", position, allocator);
-                platform.AddMember("angle", input_document["body"][i]["angle"].GetFloat(), allocator);
-                platform.AddMember("type", input_document["body"][i]["type"].GetInt(), allocator);
-
-                
-                
-                for (int j = 0; j < input_document["body"][i]["fixture"].Size(); j++)
-                {
-                    fixtures_array.PushBack(input_document["body"][i]["fixture"][j], allocator);
-                    fixtures_array[j].RemoveMember("name");
-                }
-                
+                platform.AddMember("angle", angle, allocator);
+                platform.AddMember("type", body_type, allocator);
                 platform.AddMember("fixture", fixtures_array, allocator);
-                
                 
 //                int imageCount = input_document["image"].Size();
 //                for (int j = 0; j < imageCount; j++)
@@ -197,34 +173,11 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int lev
             else if (body_name.find(literal_collectable) != string::npos)
             {
                 rapidjson::Value collectable(rapidjson::kObjectType);
-                rapidjson::Value position(rapidjson::kObjectType);
-                rapidjson::Value fixtures_array(rapidjson::kArrayType);
-//                rapidjson::Value images_rray(rapidjson::kArrayType);
                 
                 collectable.AddMember("global_index", i, allocator);
-                
-                if (input_document["body"][i]["position"] == 0)
-                {
-                    position.AddMember("x", 0.f, allocator);
-                    position.AddMember("y", 0.f, allocator);
-                }
-                else
-                {
-                    position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
-                    position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
-                }
-                
                 collectable.AddMember("position", position, allocator);
-                collectable.AddMember("angle", input_document["body"][i]["angle"].GetFloat(), allocator);
-                collectable.AddMember("type", input_document["body"][i]["type"].GetInt(), allocator);
-
-                
-                for (int j = 0; j < input_document["body"][i]["fixture"].Size(); j++)
-                {
-                    fixtures_array.PushBack(input_document["body"][i]["fixture"][j], allocator);
-                    fixtures_array[j].RemoveMember("name");
-                }
-                
+                collectable.AddMember("angle", angle, allocator);
+                collectable.AddMember("type", body_type, allocator);
                 collectable.AddMember("fixture", fixtures_array, allocator);
                 
 //                int imageCount = input_document["image"].Size();
@@ -294,7 +247,6 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int lev
                     for (int j = 0; j < input_document["body"][i]["fixture"].Size(); j++)
                     {
                         fixtures_array.PushBack(input_document["body"][i]["fixture"][j], allocator);
-                        fixtures_array[j].RemoveMember("name");
                     }
                     
                     jammer.AddMember("fixture", fixtures_array, allocator);
@@ -398,7 +350,6 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int lev
                                 for (int k = 0; k < input_document["body"][j]["fixture"].Size(); k++)
                                 {
                                     fixtures_array.PushBack(input_document["body"][j]["fixture"][k], allocator);
-                                    fixtures_array[k].RemoveMember("name");
                                 }
                                 
                                 rope_body.AddMember("fixture", fixtures_array, allocator);
@@ -489,7 +440,6 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int lev
                                 for (int k = 0; k < input_document["body"][j]["fixture"].Size(); k++)
                                 {
                                     fixtures_array.PushBack(input_document["body"][j]["fixture"][k], allocator);
-                                    fixtures_array[k].RemoveMember("name");
                                 }
                                 
                                 rope_body.AddMember("fixture", fixtures_array, allocator);
@@ -563,7 +513,6 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int lev
                 for (int j = 0; j < input_document["body"][i]["fixture"].Size(); j++)
                 {
                     fixtures_array.PushBack(input_document["body"][i]["fixture"][j], allocator);
-                    fixtures_array[j].RemoveMember("name");
                 }
                 
                 hinge_body.AddMember("fixture", fixtures_array, allocator);
