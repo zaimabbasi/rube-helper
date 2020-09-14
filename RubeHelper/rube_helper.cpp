@@ -80,8 +80,17 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int lev
                 
                 enemy.AddMember("global_index", i, allocator);
                 
-                position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
-                position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
+                if (input_document["body"][i]["position"] == 0)
+                {
+                    position.AddMember("x", 0.f, allocator);
+                    position.AddMember("y", 0.f, allocator);
+                }
+                else
+                {
+                    position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
+                    position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
+                }
+                
                 enemy.AddMember("position", position, allocator);
                 enemy.AddMember("angle", input_document["body"][i]["angle"].GetFloat(), allocator);
                 enemy.AddMember("type", input_document["body"][i]["type"].GetInt(), allocator);
@@ -132,8 +141,17 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int lev
                 
                 platform.AddMember("global_index", i, allocator);
                 
-                position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
-                position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
+                if (input_document["body"][i]["position"] == 0)
+                {
+                    position.AddMember("x", 0.f, allocator);
+                    position.AddMember("y", 0.f, allocator);
+                }
+                else
+                {
+                    position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
+                    position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
+                }
+                
                 platform.AddMember("position", position, allocator);
                 platform.AddMember("angle", input_document["body"][i]["angle"].GetFloat(), allocator);
                 platform.AddMember("type", input_document["body"][i]["type"].GetInt(), allocator);
@@ -185,8 +203,17 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int lev
                 
                 collectable.AddMember("global_index", i, allocator);
                 
-                position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
-                position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
+                if (input_document["body"][i]["position"] == 0)
+                {
+                    position.AddMember("x", 0.f, allocator);
+                    position.AddMember("y", 0.f, allocator);
+                }
+                else
+                {
+                    position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
+                    position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
+                }
+                
                 collectable.AddMember("position", position, allocator);
                 collectable.AddMember("angle", input_document["body"][i]["angle"].GetFloat(), allocator);
                 collectable.AddMember("type", input_document["body"][i]["type"].GetInt(), allocator);
@@ -248,8 +275,17 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int lev
                     
                     jammer.AddMember("global_index", i, allocator);
                     
-                    position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
-                    position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
+                    if (input_document["body"][i]["position"] == 0)
+                    {
+                        position.AddMember("x", 0.f, allocator);
+                        position.AddMember("y", 0.f, allocator);
+                    }
+                    else
+                    {
+                        position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
+                        position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
+                    }
+                    
                     jammer.AddMember("position", position, allocator);
                     jammer.AddMember("angle", input_document["body"][i]["angle"].GetFloat(), allocator);
                     jammer.AddMember("type", input_document["body"][i]["type"].GetInt(), allocator);
@@ -343,8 +379,17 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int lev
                                 rope_body.AddMember("global_index", j, allocator);
                                 rope_body.AddMember("local_index", rope_body_id(body_name), allocator);
                                 
-                                position.AddMember("x", input_document["body"][j]["position"]["x"].GetFloat(), allocator);
-                                position.AddMember("y", input_document["body"][j]["position"]["y"].GetFloat(), allocator);
+                                if (input_document["body"][i]["position"] == 0)
+                                {
+                                    position.AddMember("x", 0.f, allocator);
+                                    position.AddMember("y", 0.f, allocator);
+                                }
+                                else
+                                {
+                                    position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
+                                    position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
+                                }
+                                
                                 rope_body.AddMember("position", position, allocator);
                                 rope_body.AddMember("angle", input_document["body"][j]["angle"].GetFloat(), allocator);
                                 rope_body.AddMember("type", input_document["body"][j]["type"].GetInt(), allocator);
@@ -424,8 +469,17 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int lev
                                 rope_body.AddMember("global_index", j, allocator);
                                 rope_body.AddMember("local_index", rope_body_id(body_name), allocator);
                                 
-                                position.AddMember("x", input_document["body"][j]["position"]["x"].GetFloat(), allocator);
-                                position.AddMember("y", input_document["body"][j]["position"]["y"].GetFloat(), allocator);
+                                if (input_document["body"][i]["position"] == 0)
+                                {
+                                    position.AddMember("x", 0.f, allocator);
+                                    position.AddMember("y", 0.f, allocator);
+                                }
+                                else
+                                {
+                                    position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
+                                    position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
+                                }
+                                
                                 rope_body.AddMember("position", position, allocator);
                                 rope_body.AddMember("angle", input_document["body"][j]["angle"].GetFloat(), allocator);
                                 rope_body.AddMember("type", input_document["body"][j]["type"].GetInt(), allocator);
@@ -489,8 +543,17 @@ bool RubeHelper::parse_level(std::string res_path, std::string tar_path, int lev
                 
                 hinge_body.AddMember("global_index", i, allocator);
                 
-                position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
-                position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
+                if (input_document["body"][i]["position"] == 0)
+                {
+                    position.AddMember("x", 0.f, allocator);
+                    position.AddMember("y", 0.f, allocator);
+                }
+                else
+                {
+                    position.AddMember("x", input_document["body"][i]["position"]["x"].GetFloat(), allocator);
+                    position.AddMember("y", input_document["body"][i]["position"]["y"].GetFloat(), allocator);
+                }
+                
                 hinge_body.AddMember("position", position, allocator);
                 hinge_body.AddMember("angle", input_document["body"][i]["angle"].GetFloat(), allocator);
                 hinge_body.AddMember("type", input_document["body"][i]["type"].GetInt(), allocator);
